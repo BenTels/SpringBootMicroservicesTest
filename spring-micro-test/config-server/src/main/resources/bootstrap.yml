@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: config-server
+  profiles:
+    active:
+    # - git
+    - native
+  cloud:
+    config:
+      server:
+        git:
+          uri: file://${DEV}/workspaces/eclipse/SpringBootMicroservicesTest/spring-micro-test/config
+        native:
+          search-locations:
+          - file://${DEV}/workspaces/eclipse/SpringBootMicroservicesTest/spring-micro-test/config
+server:
+  port: 8888
+logging:
+  level:
+    root: debug

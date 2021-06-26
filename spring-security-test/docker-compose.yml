@@ -1,0 +1,69 @@
+version: "3.1"
+services:
+#  db:
+#    image: mariadb:latest
+#    restart: always
+#    container_name: mariadb
+#    environment:
+#      MARIADB_ROOT_PASSWORD: superroot
+#      MARIADB_DATABASE: keycloak
+#      MARIADB_USER: keycloak
+#      MARIADB_PASSWORD: password
+#    networks:
+#      - keycloak-network
+#    ports:
+#      - "3306"
+#    volumes:
+#      - data-volume:/var/lib/mysql
+  db:
+    image: postgres:latest
+    restart: always
+    container_name: postgres
+    environment:
+      POSTGRES_DB: keycloak
+      POSTGRES_USER: keycloak
+      POSTGRES_PASSWORD: password
+    networks:
+      - keycloak-network
+    ports:
+      - "3306:3306"
+    volumes:
+      - pgl-volume:/var/lib/postgresql/data
+      
+  keycloak:
+    image: jboss/keycloak:13.0.1
+    container_name: keycloak
+    environment:
+      KEYCLOAK_USER: kuser
+      KEYCLOAK_PASSWORD: kpasswd
+      DB_VENDOR: postgres
+      DB_USER: keycloak
+      DB_PASSWORD: password
+      DB_ADDR: postgres
+      _JAVA_OPTS: -Dkeycloak.frontendUrl=http://keycloak:8080
+    networks:
+      - keycloak-network
+    ports:
+      - 8080:8080
+      - 8443:8443
+    depends_on: 
+    - db
+  
+  main_app:
+    image: nl.bentels.test.sec/spring-security-test:0.0.1-SNAPSHOT
+    container_name: app
+    networks:
+      - keycloak-network
+    ports:
+      - 8090:8080
+    environment:
+      JAVA_TOOL_OPTIONS: -Ddebug -Dlogging.level.org.keycloak=DEBUG
+
+
+networks:
+  keycloak-network:
+    driver: bridge
+
+volumes:
+  data-volume:
+  pgl-volume:

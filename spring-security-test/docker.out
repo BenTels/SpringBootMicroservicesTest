@@ -1,0 +1,1255 @@
+Attaching to postgres, app, keycloak
+[36mapp         |[0m Picked up JAVA_TOOL_OPTIONS: -Ddebug -Dlogging.level.org.keycloak=DEBUG
+[32mpostgres    |[0m 
+[32mpostgres    |[0m PostgreSQL Database directory appears to contain a database; Skipping initialization
+[32mpostgres    |[0m 
+[32mpostgres    |[0m 2021-06-26 22:25:23.908 UTC [1] LOG:  starting PostgreSQL 13.3 (Debian 13.3-1.pgdg100+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 8.3.0-6) 8.3.0, 64-bit
+[32mpostgres    |[0m 2021-06-26 22:25:23.925 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+[32mpostgres    |[0m 2021-06-26 22:25:23.925 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+[32mpostgres    |[0m 2021-06-26 22:25:24.604 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+[32mpostgres    |[0m 2021-06-26 22:25:25.100 UTC [28] LOG:  database system was shut down at 2021-06-26 22:24:36 UTC
+[32mpostgres    |[0m 2021-06-26 22:25:25.167 UTC [1] LOG:  database system is ready to accept connections
+[36mapp         |[0m 
+[36mapp         |[0m   .   ____          _            __ _ _
+[36mapp         |[0m  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+[36mapp         |[0m ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+[36mapp         |[0m  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+[36mapp         |[0m   '  |____| .__|_| |_|_| |_\__, | / / / /
+[36mapp         |[0m  =========|_|==============|___/=/_/_/_/
+[36mapp         |[0m  :: Spring Boot ::                (v2.5.1)
+[36mapp         |[0m 
+[36mapp         |[0m 2021-06-26 22:25:28.726  INFO 1 --- [           main] n.b.test.sec.SecurityTestApplication     : Starting SecurityTestApplication v0.0.1-SNAPSHOT using Java 16.0.1 on 577c66d46783 with PID 1 (/app.jar started by root in /)
+[36mapp         |[0m 2021-06-26 22:25:28.729  INFO 1 --- [           main] n.b.test.sec.SecurityTestApplication     : No active profile set, falling back to default profiles: default
+[36mapp         |[0m 2021-06-26 22:25:28.729 DEBUG 1 --- [           main] o.s.boot.SpringApplication               : Loading source class nl.bentels.test.sec.SecurityTestApplication
+[36mapp         |[0m 2021-06-26 22:25:28.803 DEBUG 1 --- [           main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@80ec1f8
+[36mapp         |[0m DEBUG StatusLogger org.slf4j.helpers.Log4jLoggerFactory is not on classpath. Good!
+[36mapp         |[0m 2021-06-26 22:25:30.756 DEBUG 1 --- [           main] .s.b.w.e.t.TomcatServletWebServerFactory : Code archive: /app.jar
+[36mapp         |[0m 2021-06-26 22:25:30.756 DEBUG 1 --- [           main] .s.b.w.e.t.TomcatServletWebServerFactory : Code archive: /app.jar
+[36mapp         |[0m 2021-06-26 22:25:30.758 DEBUG 1 --- [           main] .s.b.w.e.t.TomcatServletWebServerFactory : None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
+[36mapp         |[0m 2021-06-26 22:25:30.806  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+[36mapp         |[0m 2021-06-26 22:25:30.830  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+[36mapp         |[0m 2021-06-26 22:25:30.830  INFO 1 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+[36mapp         |[0m 2021-06-26 22:25:30.903  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+[36mapp         |[0m 2021-06-26 22:25:30.904 DEBUG 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+[36mapp         |[0m 2021-06-26 22:25:30.904  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2101 ms
+[36mapp         |[0m 2021-06-26 22:25:31.217 DEBUG 1 --- [           main] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: springSecurityFilterChain urls=[/*] order=-100, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105, keycloakAuthenticationProcessingFilter urls=[/*] order=2147483647, keycloakPreAuthActionsFilter urls=[/*] order=2147483647, keycloakSecurityContextRequestFilter urls=[/*] order=2147483647, keycloakAuthenticatedActionsRequestFilter urls=[/*] order=2147483647
+[36mapp         |[0m 2021-06-26 22:25:31.217 DEBUG 1 --- [           main] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
+[36mapp         |[0m 2021-06-26 22:25:31.249 DEBUG 1 --- [           main] o.s.b.w.s.f.OrderedRequestContextFilter  : Filter 'requestContextFilter' configured for use
+[36mapp         |[0m 2021-06-26 22:25:31.250 DEBUG 1 --- [           main] s.f.KeycloakSecurityContextRequestFilter : Filter 'keycloakSecurityContextRequestFilter' configured for use
+[36mapp         |[0m 2021-06-26 22:25:31.250 DEBUG 1 --- [           main] s.b.w.s.f.OrderedCharacterEncodingFilter : Filter 'characterEncodingFilter' configured for use
+[36mapp         |[0m 2021-06-26 22:25:31.251 DEBUG 1 --- [           main] .DelegatingFilterProxyRegistrationBean$1 : Filter 'springSecurityFilterChain' configured for use
+[36mapp         |[0m 2021-06-26 22:25:31.251 DEBUG 1 --- [           main] f.KeycloakAuthenticationProcessingFilter : Filter 'keycloakAuthenticationProcessingFilter' configured for use
+[36mapp         |[0m 2021-06-26 22:25:31.251 DEBUG 1 --- [           main] o.s.b.w.s.f.OrderedFormContentFilter     : Filter 'formContentFilter' configured for use
+[36mapp         |[0m 2021-06-26 22:25:31.252 DEBUG 1 --- [           main] o.k.a.s.f.KeycloakPreAuthActionsFilter   : Filter 'keycloakPreAuthActionsFilter' configured for use
+[36mapp         |[0m 2021-06-26 22:25:31.252 DEBUG 1 --- [           main] a.s.f.KeycloakAuthenticatedActionsFilter : Filter 'keycloakAuthenticatedActionsRequestFilter' configured for use
+[36mapp         |[0m 2021-06-26 22:25:31.254 DEBUG 1 --- [           main] k.a.t.AbstractKeycloakAuthenticatorValve : Using org.keycloak.adapters.springboot.KeycloakSpringBootConfigResolverWrapper to resolve Keycloak configuration on a per-request basis.
+[36mapp         |[0m 2021-06-26 22:25:31.416  INFO 1 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@25e2a451, org.springframework.security.web.context.SecurityContextPersistenceFilter@75f65e45, org.springframework.security.web.header.HeaderWriterFilter@5dd91bca, org.springframework.security.web.authentication.logout.LogoutFilter@565b064f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4a891c97, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@75390459, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1698ee84, org.springframework.security.web.session.SessionManagementFilter@3382f8ae, org.springframework.security.web.access.ExceptionTranslationFilter@60a2630a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@788fcafb]
+[36mapp         |[0m 2021-06-26 22:25:31.586 DEBUG 1 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+[36mapp         |[0m 2021-06-26 22:25:31.780 DEBUG 1 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 5 mappings in 'requestMappingHandlerMapping'
+[36mapp         |[0m 2021-06-26 22:25:31.838 DEBUG 1 --- [           main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Detected 1 mappings in 'beanNameHandlerMapping'
+[36mapp         |[0m 2021-06-26 22:25:31.868 DEBUG 1 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+[36mapp         |[0m 2021-06-26 22:25:31.881 DEBUG 1 --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+[36mapp         |[0m 2021-06-26 22:25:32.005  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+[36mapp         |[0m 2021-06-26 22:25:32.178 DEBUG 1 --- [           main] ConditionEvaluationReportLoggingListener : 
+[36mapp         |[0m 
+[36mapp         |[0m 
+[36mapp         |[0m ============================
+[36mapp         |[0m CONDITIONS EVALUATION REPORT
+[36mapp         |[0m ============================
+[36mapp         |[0m 
+[36mapp         |[0m 
+[36mapp         |[0m Positive matches:
+[36mapp         |[0m -----------------
+[36mapp         |[0m 
+[36mapp         |[0m    AopAutoConfiguration matched:
+[36mapp         |[0m       - @ConditionalOnProperty (spring.aop.auto=true) matched (OnPropertyCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    AopAutoConfiguration.ClassProxyingConfiguration matched:
+[36mapp         |[0m       - @ConditionalOnMissingClass did not find unwanted class 'org.aspectj.weaver.Advice' (OnClassCondition)
+[36mapp         |[0m       - @ConditionalOnProperty (spring.aop.proxy-target-class=true) matched (OnPropertyCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    DispatcherServletAutoConfiguration matched:
+[36mapp         |[0m       - @ConditionalOnClass found required class 'org.springframework.web.servlet.DispatcherServlet' (OnClassCondition)
+[36mapp         |[0m       - found 'session' scope (OnWebApplicationCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    DispatcherServletAutoConfiguration.DispatcherServletConfiguration matched:
+[36mapp         |[0m       - @ConditionalOnClass found required class 'javax.servlet.ServletRegistration' (OnClassCondition)
+[36mapp         |[0m       - Default DispatcherServlet did not find dispatcher servlet beans (DispatcherServletAutoConfiguration.DefaultDispatcherServletCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    DispatcherServletAutoConfiguration.DispatcherServletRegistrationConfiguration matched:
+[36mapp         |[0m       - @ConditionalOnClass found required class 'javax.servlet.ServletRegistration' (OnClassCondition)
+[36mapp         |[0m       - DispatcherServlet Registration did not find servlet registration bean (DispatcherServletAutoConfiguration.DispatcherServletRegistrationCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    DispatcherServletAutoConfiguration.DispatcherServletRegistrationConfiguration#dispatcherServletRegistration matched:
+[36mapp         |[0m       - @ConditionalOnBean (names: dispatcherServlet types: org.springframework.web.servlet.DispatcherServlet; SearchStrategy: all) found bean 'dispatcherServlet' (OnBeanCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    EmbeddedWebServerFactoryCustomizerAutoConfiguration matched:
+[36mapp         |[0m       - @ConditionalOnWebApplication (required) found 'session' scope (OnWebApplicationCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    EmbeddedWebServerFactoryCustomizerAutoConfiguration.TomcatWebServerFactoryCustomizerConfiguration matched:
+[36mapp         |[0m       - @ConditionalOnClass found required classes 'org.apache.catalina.startup.Tomcat', 'org.apache.coyote.UpgradeProtocol' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    ErrorMvcAutoConfiguration matched:
+[36mapp         |[0m       - @ConditionalOnClass found required classes 'javax.servlet.Servlet', 'org.springframework.web.servlet.DispatcherServlet' (OnClassCondition)
+[36mapp         |[0m       - found 'session' scope (OnWebApplicationCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    ErrorMvcAutoConfiguration#basicErrorController matched:
+[36mapp         |[0m       - @ConditionalOnMissingBean (types: org.springframework.boot.web.servlet.error.ErrorController; SearchStrategy: current) did not find any beans (OnBeanCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    ErrorMvcAutoConfiguration#errorAttributes matched:
+[36mapp         |[0m       - @ConditionalOnMissingBean (types: org.springframework.boot.web.servlet.error.ErrorAttributes; SearchStrategy: current) did not find any beans (OnBeanCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    ErrorMvcAutoConfiguration.DefaultErrorViewResolverConfiguration#conventionErrorViewResolver matched:
+[36mapp         |[0m       - @ConditionalOnBean (types: org.springframework.web.servlet.DispatcherServlet; SearchStrategy: all) found bean 'dispatcherServlet'; @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.web.servlet.error.ErrorViewResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    ErrorMvcAutoConfiguration.WhitelabelErrorViewConfiguration matched:
+[36mapp         |[0m       - @ConditionalOnProperty (server.error.whitelabel.enabled) matched (OnPropertyCondition)
+[36mapp         |[0m       - ErrorTemplate Missing did not find error template view (ErrorMvcAutoConfiguration.ErrorTemplateMissingCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    ErrorMvcAutoConfiguration.WhitelabelErrorViewConfiguration#beanNameViewResolver matched:
+[36mapp         |[0m       - @ConditionalOnMissingBean (types: org.springframework.web.servlet.view.BeanNameViewResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    ErrorMvcAutoConfiguration.WhitelabelErrorViewConfiguration#defaultErrorView matched:
+[36mapp         |[0m       - @ConditionalOnMissingBean (names: error; SearchStrategy: all) did not find any beans (OnBeanCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    GenericCacheConfiguration matched:
+[36mapp         |[0m       - Cache org.springframework.boot.autoconfigure.cache.GenericCacheConfiguration automatic cache type (CacheCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    HttpEncodingAutoConfiguration matched:
+[36mapp         |[0m       - @ConditionalOnClass found required class 'org.springframework.web.filter.CharacterEncodingFilter' (OnClassCondition)
+[36mapp         |[0m       - found 'session' scope (OnWebApplicationCondition)
+[36mapp         |[0m       - @ConditionalOnProperty (server.servlet.encoding.enabled) matched (OnPropertyCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    HttpEncodingAutoConfiguration#characterEncodingFilter matched:
+[36mapp         |[0m       - @ConditionalOnMissingBean (types: org.springframework.web.filter.CharacterEncodingFilter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    HttpMessageConvertersAutoConfiguration matched:
+[36mapp         |[0m       - @ConditionalOnClass found required class 'org.springframework.http.converter.HttpMessageConverter' (OnClassCondition)
+[36mapp         |[0m       - NoneNestedConditions 0 matched 1 did not; NestedCondition on HttpMessageConvertersAutoConfiguration.NotReactiveWebApplicationCondition.ReactiveWebApplication did not find reactive web application classes (HttpMessageConvertersAutoConfiguration.NotReactiveWebApplicationCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    HttpMessageConvertersAutoConfiguration#messageConverters matched:
+[36mapp         |[0m       - @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.http.HttpMessageConverters; SearchStrategy: all) did not find any beans (OnBeanCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    HttpMessageConvertersAutoConfiguration.StringHttpMessageConverterConfiguration matched:
+[36mapp         |[0m       - @ConditionalOnClass found required class 'org.springframework.http.converter.StringHttpMessageConverter' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    HttpMessageConvertersAutoConfiguration.StringHttpMessageConverterConfiguration#stringHttpMessageConverter matched:
+[36mapp         |[0m       - @ConditionalOnMissingBean (types: org.springframework.http.converter.StringHttpMessageConverter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    JacksonAutoConfiguration matched:
+[36mapp         |[0m       - @ConditionalOnClass found required class 'com.fasterxml.jackson.databind.ObjectMapper' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    JacksonAutoConfiguration.Jackson2ObjectMapperBuilderCustomizerConfiguration matched:
+[36mapp         |[0m       - @ConditionalOnClass found required class 'org.springframework.http.converter.json.Jackson2ObjectMapperBuilder' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    JacksonAutoConfiguration.JacksonObjectMapperBuilderConfiguration matched:
+[36mapp         |[0m       - @ConditionalOnClass found required class 'org.springframework.http.converter.json.Jackson2ObjectMapperBuilder' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    JacksonAutoConfiguration.JacksonObjectMapperBuilderConfiguration#jacksonObjectMapperBuilder matched:
+[36mapp         |[0m       - @ConditionalOnMissingBean (types: org.springframework.http.converter.json.Jackson2ObjectMapperBuilder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    JacksonAutoConfiguration.JacksonObjectMapperConfiguration matched:
+[36mapp         |[0m       - @ConditionalOnClass found required class 'org.springframework.http.converter.json.Jackson2ObjectMapperBuilder' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    JacksonAutoConfiguration.JacksonObjectMapperConfiguration#jacksonObjectMapper matched:
+[36mapp         |[0m       - @ConditionalOnMissingBean (types: com.fasterxml.jackson.databind.ObjectMapper; SearchStrategy: all) did not find any beans (OnBeanCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    JacksonAutoConfiguration.ParameterNamesModuleConfiguration matched:
+[36mapp         |[0m       - @ConditionalOnClass found required class 'com.fasterxml.jackson.module.paramnames.ParameterNamesModule' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    JacksonAutoConfiguration.ParameterNamesModuleConfiguration#parameterNamesModule matched:
+[36mapp         |[0m       - @ConditionalOnMissingBean (types: com.fasterxml.jackson.module.paramnames.ParameterNamesModule; SearchStrategy: all) did not find any beans (OnBeanCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    JacksonHttpMessageConvertersConfiguration.MappingJackson2HttpMessageConverterConfiguration matched:
+[36mapp         |[0m       - @ConditionalOnClass found required class 'com.fasterxml.jackson.databind.ObjectMapper' (OnClassCondition)
+[36mapp         |[0m       - @ConditionalOnProperty (spring.mvc.converters.preferred-json-mapper=jackson) matched (OnPropertyCondition)
+[36mapp         |[0m       - @ConditionalOnBean (types: com.fasterxml.jackson.databind.ObjectMapper; SearchStrategy: all) found bean 'jacksonObjectMapper' (OnBeanCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    JacksonHttpMessageConvertersConfiguration.MappingJackson2HttpMessageConverterConfiguration#mappingJackson2HttpMessageConverter matched:
+[36mapp         |[0m       - @ConditionalOnMissingBean (types: org.springframework.http.converter.json.MappingJackson2HttpMessageConverter ignored: org.springframework.hateoas.server.mvc.TypeConstrainedMappingJackson2HttpMessageConverter,org.springframework.data.rest.webmvc.alps.AlpsJsonHttpMessageConverter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    KeycloakAutoConfiguration matched:
+[36mapp         |[0m       - @ConditionalOnWebApplication (required) found 'session' scope (OnWebApplicationCondition)
+[36mapp         |[0m       - @ConditionalOnProperty (keycloak.enabled) matched (OnPropertyCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    KeycloakAutoConfiguration#tomcatKeycloakContextCustomizer matched:
+[36mapp         |[0m       - @ConditionalOnClass found required class 'org.apache.catalina.startup.Tomcat' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    LifecycleAutoConfiguration#defaultLifecycleProcessor matched:
+[36mapp         |[0m       - @ConditionalOnMissingBean (names: lifecycleProcessor; SearchStrategy: current) did not find any beans (OnBeanCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    MultipartAutoConfiguration matched:
+[36mapp         |[0m       - @ConditionalOnClass found required classes 'javax.servlet.Servlet', 'org.springframework.web.multipart.support.StandardServletMultipartResolver', 'javax.servlet.MultipartConfigElement' (OnClassCondition)
+[36mapp         |[0m       - found 'session' scope (OnWebApplicationCondition)
+[36mapp         |[0m       - @ConditionalOnProperty (spring.servlet.multipart.enabled) matched (OnPropertyCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    MultipartAutoConfiguration#multipartConfigElement matched:
+[36mapp         |[0m       - @ConditionalOnMissingBean (types: javax.servlet.MultipartConfigElement,org.springframework.web.multipart.commons.CommonsMultipartResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    MultipartAutoConfiguration#multipartResolver matched:
+[36mapp         |[0m       - @ConditionalOnMissingBean (types: org.springframework.web.multipart.MultipartResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    NoOpCacheConfiguration matched:
+[36mapp         |[0m       - Cache org.springframework.boot.autoconfigure.cache.NoOpCacheConfiguration automatic cache type (CacheCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    PropertyPlaceholderAutoConfiguration#propertySourcesPlaceholderConfigurer matched:
+[36mapp         |[0m       - @ConditionalOnMissingBean (types: org.springframework.context.support.PropertySourcesPlaceholderConfigurer; SearchStrategy: current) did not find any beans (OnBeanCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    RestTemplateAutoConfiguration matched:
+[36mapp         |[0m       - @ConditionalOnClass found required class 'org.springframework.web.client.RestTemplate' (OnClassCondition)
+[36mapp         |[0m       - NoneNestedConditions 0 matched 1 did not; NestedCondition on RestTemplateAutoConfiguration.NotReactiveWebApplicationCondition.ReactiveWebApplication did not find reactive web application classes (RestTemplateAutoConfiguration.NotReactiveWebApplicationCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    RestTemplateAutoConfiguration#restTemplateBuilder matched:
+[36mapp         |[0m       - @ConditionalOnMissingBean (types: org.springframework.boot.web.client.RestTemplateBuilder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    RestTemplateAutoConfiguration#restTemplateBuilderConfigurer matched:
+[36mapp         |[0m       - @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.web.client.RestTemplateBuilderConfigurer; SearchStrategy: all) did not find any beans (OnBeanCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    SecurityAutoConfiguration matched:
+[36mapp         |[0m       - @ConditionalOnClass found required class 'org.springframework.security.authentication.DefaultAuthenticationEventPublisher' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    SecurityAutoConfiguration#authenticationEventPublisher matched:
+[36mapp         |[0m       - @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationEventPublisher; SearchStrategy: all) did not find any beans (OnBeanCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    SecurityFilterAutoConfiguration matched:
+[36mapp         |[0m       - @ConditionalOnClass found required classes 'org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer', 'org.springframework.security.config.http.SessionCreationPolicy' (OnClassCondition)
+[36mapp         |[0m       - found 'session' scope (OnWebApplicationCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    SecurityFilterAutoConfiguration#securityFilterChainRegistration matched:
+[36mapp         |[0m       - @ConditionalOnBean (names: springSecurityFilterChain; SearchStrategy: all) found bean 'springSecurityFilterChain' (OnBeanCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    ServletWebServerFactoryAutoConfiguration matched:
+[36mapp         |[0m       - @ConditionalOnClass found required class 'javax.servlet.ServletRequest' (OnClassCondition)
+[36mapp         |[0m       - found 'session' scope (OnWebApplicationCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    ServletWebServerFactoryAutoConfiguration#tomcatServletWebServerFactoryCustomizer matched:
+[36mapp         |[0m       - @ConditionalOnClass found required class 'org.apache.catalina.startup.Tomcat' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    ServletWebServerFactoryConfiguration.EmbeddedTomcat matched:
+[36mapp         |[0m       - @ConditionalOnClass found required classes 'javax.servlet.Servlet', 'org.apache.catalina.startup.Tomcat', 'org.apache.coyote.UpgradeProtocol' (OnClassCondition)
+[36mapp         |[0m       - @ConditionalOnMissingBean (types: org.springframework.boot.web.servlet.server.ServletWebServerFactory; SearchStrategy: current) did not find any beans (OnBeanCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    SimpleCacheConfiguration matched:
+[36mapp         |[0m       - Cache org.springframework.boot.autoconfigure.cache.SimpleCacheConfiguration automatic cache type (CacheCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    SqlInitializationAutoConfiguration matched:
+[36mapp         |[0m       - @ConditionalOnProperty (spring.sql.init.enabled) matched (OnPropertyCondition)
+[36mapp         |[0m       - NoneNestedConditions 0 matched 1 did not; NestedCondition on SqlInitializationAutoConfiguration.SqlInitializationModeCondition.ModeIsNever @ConditionalOnProperty (spring.sql.init.mode=never) did not find property 'mode' (SqlInitializationAutoConfiguration.SqlInitializationModeCondition)
+[36mapp         |[0m       - @ConditionalOnMissingBean (types: org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer; SearchStrategy: all) did not find any beans (OnBeanCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    TaskExecutionAutoConfiguration matched:
+[36mapp         |[0m       - @ConditionalOnClass found required class 'org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    TaskExecutionAutoConfiguration#applicationTaskExecutor matched:
+[36mapp         |[0m       - @ConditionalOnMissingBean (types: java.util.concurrent.Executor; SearchStrategy: all) did not find any beans (OnBeanCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    TaskExecutionAutoConfiguration#taskExecutorBuilder matched:
+[36mapp         |[0m       - @ConditionalOnMissingBean (types: org.springframework.boot.task.TaskExecutorBuilder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    TaskSchedulingAutoConfiguration matched:
+[36mapp         |[0m       - @ConditionalOnClass found required class 'org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    TaskSchedulingAutoConfiguration#taskSchedulerBuilder matched:
+[36mapp         |[0m       - @ConditionalOnMissingBean (types: org.springframework.boot.task.TaskSchedulerBuilder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    UserDetailsServiceAutoConfiguration matched:
+[36mapp         |[0m       - @ConditionalOnClass found required class 'org.springframework.security.authentication.AuthenticationManager' (OnClassCondition)
+[36mapp         |[0m       - @ConditionalOnBean (types: org.springframework.security.config.annotation.ObjectPostProcessor; SearchStrategy: all) found bean 'objectPostProcessor'; @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationManager,org.springframework.security.authentication.AuthenticationProvider,org.springframework.security.core.userdetails.UserDetailsService,org.springframework.security.oauth2.jwt.JwtDecoder,org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenIntrospector; SearchStrategy: all) did not find any beans (OnBeanCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    UserDetailsServiceAutoConfiguration#inMemoryUserDetailsManager matched:
+[36mapp         |[0m       - @ConditionalOnMissingBean (types: org.springframework.security.oauth2.client.registration.ClientRegistrationRepository; SearchStrategy: all) did not find any beans (OnBeanCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    WebMvcAutoConfiguration matched:
+[36mapp         |[0m       - @ConditionalOnClass found required classes 'javax.servlet.Servlet', 'org.springframework.web.servlet.DispatcherServlet', 'org.springframework.web.servlet.config.annotation.WebMvcConfigurer' (OnClassCondition)
+[36mapp         |[0m       - found 'session' scope (OnWebApplicationCondition)
+[36mapp         |[0m       - @ConditionalOnMissingBean (types: org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport; SearchStrategy: all) did not find any beans (OnBeanCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    WebMvcAutoConfiguration#formContentFilter matched:
+[36mapp         |[0m       - @ConditionalOnProperty (spring.mvc.formcontent.filter.enabled) matched (OnPropertyCondition)
+[36mapp         |[0m       - @ConditionalOnMissingBean (types: org.springframework.web.filter.FormContentFilter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    WebMvcAutoConfiguration.EnableWebMvcConfiguration#flashMapManager matched:
+[36mapp         |[0m       - @ConditionalOnMissingBean (names: flashMapManager; SearchStrategy: all) did not find any beans (OnBeanCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    WebMvcAutoConfiguration.EnableWebMvcConfiguration#localeResolver matched:
+[36mapp         |[0m       - @ConditionalOnMissingBean (names: localeResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    WebMvcAutoConfiguration.EnableWebMvcConfiguration#themeResolver matched:
+[36mapp         |[0m       - @ConditionalOnMissingBean (names: themeResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#defaultViewResolver matched:
+[36mapp         |[0m       - @ConditionalOnMissingBean (types: org.springframework.web.servlet.view.InternalResourceViewResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#requestContextFilter matched:
+[36mapp         |[0m       - @ConditionalOnMissingBean (types: org.springframework.web.context.request.RequestContextListener,org.springframework.web.filter.RequestContextFilter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#viewResolver matched:
+[36mapp         |[0m       - @ConditionalOnBean (types: org.springframework.web.servlet.ViewResolver; SearchStrategy: all) found beans 'defaultViewResolver', 'beanNameViewResolver', 'mvcViewResolver'; @ConditionalOnMissingBean (names: viewResolver types: org.springframework.web.servlet.view.ContentNegotiatingViewResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    WebSocketServletAutoConfiguration matched:
+[36mapp         |[0m       - @ConditionalOnClass found required classes 'javax.servlet.Servlet', 'javax.websocket.server.ServerContainer' (OnClassCondition)
+[36mapp         |[0m       - found 'session' scope (OnWebApplicationCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    WebSocketServletAutoConfiguration.TomcatWebSocketConfiguration matched:
+[36mapp         |[0m       - @ConditionalOnClass found required classes 'org.apache.catalina.startup.Tomcat', 'org.apache.tomcat.websocket.server.WsSci' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    WebSocketServletAutoConfiguration.TomcatWebSocketConfiguration#websocketServletWebServerCustomizer matched:
+[36mapp         |[0m       - @ConditionalOnMissingBean (names: websocketServletWebServerCustomizer; SearchStrategy: all) did not find any beans (OnBeanCondition)
+[36mapp         |[0m 
+[36mapp         |[0m 
+[36mapp         |[0m Negative matches:
+[36mapp         |[0m -----------------
+[36mapp         |[0m 
+[36mapp         |[0m    ActiveMQAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'javax.jms.ConnectionFactory' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    AopAutoConfiguration.AspectJAutoProxyingConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.aspectj.weaver.Advice' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    ArtemisAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'javax.jms.ConnectionFactory' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    BatchAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.springframework.batch.core.launch.JobLauncher' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    CacheAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnBean (types: org.springframework.cache.interceptor.CacheAspectSupport; SearchStrategy: all) did not find any beans of type org.springframework.cache.interceptor.CacheAspectSupport (OnBeanCondition)
+[36mapp         |[0m       Matched:
+[36mapp         |[0m          - @ConditionalOnClass found required class 'org.springframework.cache.CacheManager' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    CacheAutoConfiguration.CacheManagerEntityManagerFactoryDependsOnPostProcessor:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean' (OnClassCondition)
+[36mapp         |[0m          - Ancestor org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration did not match (ConditionEvaluationReport.AncestorsMatchedCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    CaffeineCacheConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'com.github.benmanes.caffeine.cache.Caffeine' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    CassandraAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'com.datastax.oss.driver.api.core.CqlSession' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    CassandraDataAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'com.datastax.oss.driver.api.core.CqlSession' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    CassandraReactiveDataAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'com.datastax.oss.driver.api.core.CqlSession' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    CassandraReactiveRepositoriesAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.springframework.data.cassandra.ReactiveSession' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    CassandraRepositoriesAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'com.datastax.oss.driver.api.core.CqlSession' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    ClientHttpConnectorAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.springframework.web.reactive.function.client.WebClient' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    CodecsAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.springframework.web.reactive.function.client.WebClient' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    CouchbaseAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'com.couchbase.client.java.Cluster' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    CouchbaseCacheConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'com.couchbase.client.java.Cluster' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    CouchbaseDataAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'com.couchbase.client.java.Bucket' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    CouchbaseReactiveDataAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'com.couchbase.client.java.Cluster' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    CouchbaseReactiveRepositoriesAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'com.couchbase.client.java.Cluster' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    CouchbaseRepositoriesAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'com.couchbase.client.java.Bucket' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    DataSourceAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    DataSourceInitializationConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.springframework.jdbc.datasource.init.DatabasePopulator' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    DataSourceTransactionManagerAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.springframework.jdbc.core.JdbcTemplate' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    DispatcherServletAutoConfiguration.DispatcherServletConfiguration#multipartResolver:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnBean (types: org.springframework.web.multipart.MultipartResolver; SearchStrategy: all) did not find any beans of type org.springframework.web.multipart.MultipartResolver (OnBeanCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    EhCacheCacheConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'net.sf.ehcache.Cache' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    ElasticsearchDataAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    ElasticsearchRepositoriesAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.elasticsearch.client.Client' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    ElasticsearchRestClientAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.elasticsearch.client.RestHighLevelClient' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    EmbeddedLdapAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'com.unboundid.ldap.listener.InMemoryDirectoryServer' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    EmbeddedMongoAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'com.mongodb.MongoClientSettings' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    EmbeddedWebServerFactoryCustomizerAutoConfiguration.JettyWebServerFactoryCustomizerConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required classes 'org.eclipse.jetty.server.Server', 'org.eclipse.jetty.util.Loader', 'org.eclipse.jetty.webapp.WebAppContext' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    EmbeddedWebServerFactoryCustomizerAutoConfiguration.NettyWebServerFactoryCustomizerConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'reactor.netty.http.server.HttpServer' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    EmbeddedWebServerFactoryCustomizerAutoConfiguration.UndertowWebServerFactoryCustomizerConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required classes 'io.undertow.Undertow', 'org.xnio.SslClientAuthMode' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    ErrorWebFluxAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.springframework.web.reactive.config.WebFluxConfigurer' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    FlywayAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.flywaydb.core.Flyway' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    FreeMarkerAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'freemarker.template.Configuration' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    GroovyTemplateAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'groovy.text.markup.MarkupTemplateEngine' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    GsonAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'com.google.gson.Gson' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    GsonHttpMessageConvertersConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'com.google.gson.Gson' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    H2ConsoleAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.h2.server.web.WebServlet' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    HazelcastAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'com.hazelcast.core.HazelcastInstance' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    HazelcastCacheConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'com.hazelcast.core.HazelcastInstance' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    HazelcastJpaDependencyAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'com.hazelcast.core.HazelcastInstance' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    HibernateJpaAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'javax.persistence.EntityManager' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    HttpHandlerAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.springframework.web.reactive.DispatcherHandler' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    HypermediaAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.springframework.hateoas.EntityModel' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    InfinispanCacheConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.infinispan.spring.embedded.provider.SpringEmbeddedCacheManager' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    InfluxDbAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.influxdb.InfluxDB' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    IntegrationAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.springframework.integration.config.EnableIntegration' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    JCacheCacheConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'javax.cache.Caching' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    JacksonHttpMessageConvertersConfiguration.MappingJackson2XmlHttpMessageConverterConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'com.fasterxml.jackson.dataformat.xml.XmlMapper' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    JdbcRepositoriesAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.springframework.data.jdbc.repository.config.AbstractJdbcConfiguration' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    JdbcTemplateAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.springframework.jdbc.core.JdbcTemplate' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    JerseyAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.glassfish.jersey.server.spring.SpringComponentProvider' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    JmsAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'javax.jms.Message' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    JmxAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnProperty (spring.jmx.enabled=true) did not find property 'enabled' (OnPropertyCondition)
+[36mapp         |[0m       Matched:
+[36mapp         |[0m          - @ConditionalOnClass found required class 'org.springframework.jmx.export.MBeanExporter' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    JndiConnectionFactoryAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.springframework.jms.core.JmsTemplate' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    JndiDataSourceAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    JooqAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.jooq.DSLContext' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    JpaRepositoriesAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.springframework.data.jpa.repository.JpaRepository' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    JsonbAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'javax.json.bind.Jsonb' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    JsonbHttpMessageConvertersConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'javax.json.bind.Jsonb' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    JtaAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'javax.transaction.Transaction' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    KafkaAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.springframework.kafka.core.KafkaTemplate' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    KeycloakAutoConfiguration#jettyKeycloakServerCustomizer:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.eclipse.jetty.webapp.WebAppContext' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    KeycloakAutoConfiguration#undertowKeycloakContextCustomizer:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'io.undertow.Undertow' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    LdapAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.springframework.ldap.core.ContextSource' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    LdapRepositoriesAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.springframework.data.ldap.repository.LdapRepository' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    LiquibaseAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'liquibase.change.DatabaseChange' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    MailSenderAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'javax.mail.internet.MimeMessage' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    MailSenderValidatorAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnSingleCandidate did not find required type 'org.springframework.mail.javamail.JavaMailSenderImpl' (OnBeanCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    MessageSourceAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - ResourceBundle did not find bundle with basename messages (MessageSourceAutoConfiguration.ResourceBundleCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    MongoAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'com.mongodb.client.MongoClient' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    MongoDataAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'com.mongodb.client.MongoClient' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    MongoReactiveAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'com.mongodb.reactivestreams.client.MongoClient' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    MongoReactiveDataAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'com.mongodb.reactivestreams.client.MongoClient' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    MongoReactiveRepositoriesAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'com.mongodb.reactivestreams.client.MongoClient' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    MongoRepositoriesAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'com.mongodb.client.MongoClient' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    MustacheAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'com.samskivert.mustache.Mustache' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    Neo4jAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.neo4j.driver.Driver' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    Neo4jDataAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.neo4j.driver.Driver' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    Neo4jReactiveDataAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.neo4j.driver.Driver' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    Neo4jReactiveRepositoriesAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.neo4j.driver.Driver' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    Neo4jRepositoriesAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.neo4j.driver.Driver' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    NettyAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'io.netty.util.NettyRuntime' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    OAuth2ClientAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.springframework.security.oauth2.client.registration.ClientRegistration' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    OAuth2ResourceServerAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.springframework.security.oauth2.server.resource.BearerTokenAuthenticationToken' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    PersistenceExceptionTranslationAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    ProjectInfoAutoConfiguration#buildProperties:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnResource did not find resource '${spring.info.build.location:classpath:META-INF/build-info.properties}' (OnResourceCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    ProjectInfoAutoConfiguration#gitProperties:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - GitResource did not find git info at classpath:git.properties (ProjectInfoAutoConfiguration.GitResourceAvailableCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    QuartzAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.quartz.Scheduler' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    R2dbcAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'io.r2dbc.spi.ConnectionFactory' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    R2dbcDataAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.springframework.data.r2dbc.core.R2dbcEntityTemplate' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    R2dbcInitializationConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required classes 'io.r2dbc.spi.ConnectionFactory', 'org.springframework.r2dbc.connection.init.DatabasePopulator' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    R2dbcRepositoriesAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'io.r2dbc.spi.ConnectionFactory' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    R2dbcTransactionManagerAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.springframework.r2dbc.connection.R2dbcTransactionManager' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    RSocketMessagingAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'io.rsocket.RSocket' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    RSocketRequesterAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'io.rsocket.RSocket' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    RSocketSecurityAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.springframework.security.rsocket.core.SecuritySocketAcceptorInterceptor' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    RSocketServerAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'io.rsocket.core.RSocketServer' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    RSocketStrategiesAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'io.netty.buffer.PooledByteBufAllocator' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    RabbitAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'com.rabbitmq.client.Channel' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    ReactiveElasticsearchRepositoriesAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.springframework.data.elasticsearch.client.reactive.ReactiveElasticsearchClient' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    ReactiveElasticsearchRestClientAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'reactor.netty.http.client.HttpClient' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    ReactiveOAuth2ClientAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'reactor.core.publisher.Flux' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    ReactiveOAuth2ResourceServerAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnWebApplication did not find reactive web application classes (OnWebApplicationCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    ReactiveSecurityAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'reactor.core.publisher.Flux' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    ReactiveUserDetailsServiceAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - AnyNestedCondition 0 matched 2 did not; NestedCondition on ReactiveUserDetailsServiceAutoConfiguration.ReactiveUserDetailsServiceCondition.ReactiveWebApplicationCondition did not find reactive web application classes; NestedCondition on ReactiveUserDetailsServiceAutoConfiguration.ReactiveUserDetailsServiceCondition.RSocketSecurityEnabledCondition @ConditionalOnBean (types: org.springframework.messaging.rsocket.annotation.support.RSocketMessageHandler; SearchStrategy: all) did not find any beans of type org.springframework.messaging.rsocket.annotation.support.RSocketMessageHandler (ReactiveUserDetailsServiceAutoConfiguration.ReactiveUserDetailsServiceCondition)
+[36mapp         |[0m       Matched:
+[36mapp         |[0m          - @ConditionalOnClass found required class 'org.springframework.security.authentication.ReactiveAuthenticationManager' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    ReactiveWebServerFactoryAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnWebApplication did not find reactive web application classes (OnWebApplicationCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    RedisAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.springframework.data.redis.core.RedisOperations' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    RedisCacheConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.springframework.data.redis.connection.RedisConnectionFactory' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    RedisReactiveAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'reactor.core.publisher.Flux' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    RedisRepositoriesAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.springframework.data.redis.repository.configuration.EnableRedisRepositories' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    RepositoryRestMvcAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    Saml2RelyingPartyAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.springframework.security.saml2.provider.service.registration.RelyingPartyRegistrationRepository' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    SecurityDataConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.springframework.security.data.repository.query.SecurityEvaluationContextExtension' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    SendGridAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'com.sendgrid.SendGrid' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    ServletWebServerFactoryAutoConfiguration#forwardedHeaderFilter:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnProperty (server.forward-headers-strategy=framework) did not find property 'server.forward-headers-strategy' (OnPropertyCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    ServletWebServerFactoryConfiguration.EmbeddedJetty:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required classes 'org.eclipse.jetty.server.Server', 'org.eclipse.jetty.util.Loader', 'org.eclipse.jetty.webapp.WebAppContext' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    ServletWebServerFactoryConfiguration.EmbeddedUndertow:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required classes 'io.undertow.Undertow', 'org.xnio.SslClientAuthMode' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    SessionAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.springframework.session.Session' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    SolrAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.apache.solr.client.solrj.impl.CloudSolrClient' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    SpringApplicationAdminJmxAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnProperty (spring.application.admin.enabled=true) did not find property 'enabled' (OnPropertyCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    SpringBootWebSecurityConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - AllNestedConditions 1 matched 1 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter,org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) found beans of type 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter' securityConfiguration; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+[36mapp         |[0m       Matched:
+[36mapp         |[0m          - found 'session' scope (OnWebApplicationCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    SpringDataWebAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.springframework.data.web.PageableHandlerMethodArgumentResolver' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    TaskSchedulingAutoConfiguration#taskScheduler:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnBean (names: org.springframework.context.annotation.internalScheduledAnnotationProcessor; SearchStrategy: all) did not find any beans named org.springframework.context.annotation.internalScheduledAnnotationProcessor (OnBeanCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    ThymeleafAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.thymeleaf.spring5.SpringTemplateEngine' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    TransactionAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.springframework.transaction.PlatformTransactionManager' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    ValidationAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'javax.validation.executable.ExecutableValidator' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    WebClientAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.springframework.web.reactive.function.client.WebClient' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    WebFluxAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.springframework.web.reactive.config.WebFluxConfigurer' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    WebMvcAutoConfiguration#hiddenHttpMethodFilter:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnProperty (spring.mvc.hiddenmethod.filter.enabled) did not find property 'enabled' (OnPropertyCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    WebMvcAutoConfiguration.ResourceChainCustomizerConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnEnabledResourceChain did not find class org.webjars.WebJarAssetLocator (OnEnabledResourceChainCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#beanNameViewResolver:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnMissingBean (types: org.springframework.web.servlet.view.BeanNameViewResolver; SearchStrategy: all) found beans of type 'org.springframework.web.servlet.view.BeanNameViewResolver' beanNameViewResolver (OnBeanCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    WebSecurityEnablerConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnMissingBean (names: springSecurityFilterChain; SearchStrategy: all) found beans named springSecurityFilterChain (OnBeanCondition)
+[36mapp         |[0m       Matched:
+[36mapp         |[0m          - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
+[36mapp         |[0m          - found 'session' scope (OnWebApplicationCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    WebServiceTemplateAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.springframework.oxm.Marshaller' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    WebServicesAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.springframework.ws.transport.http.MessageDispatcherServlet' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    WebSocketMessagingAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.springframework.web.socket.config.annotation.WebSocketMessageBrokerConfigurer' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    WebSocketReactiveAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnWebApplication did not find reactive web application classes (OnWebApplicationCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    WebSocketServletAutoConfiguration.JettyWebSocketConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'org.eclipse.jetty.websocket.jsr356.server.deploy.WebSocketServerContainerInitializer' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    WebSocketServletAutoConfiguration.UndertowWebSocketConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'io.undertow.websockets.jsr.Bootstrap' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m    XADataSourceAutoConfiguration:
+[36mapp         |[0m       Did not match:
+[36mapp         |[0m          - @ConditionalOnClass did not find required class 'javax.transaction.TransactionManager' (OnClassCondition)
+[36mapp         |[0m 
+[36mapp         |[0m 
+[36mapp         |[0m Exclusions:
+[36mapp         |[0m -----------
+[36mapp         |[0m 
+[36mapp         |[0m     None
+[36mapp         |[0m 
+[36mapp         |[0m 
+[36mapp         |[0m Unconditional classes:
+[36mapp         |[0m ----------------------
+[36mapp         |[0m 
+[36mapp         |[0m     org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration
+[36mapp         |[0m 
+[36mapp         |[0m     org.springframework.boot.autoconfigure.context.LifecycleAutoConfiguration
+[36mapp         |[0m 
+[36mapp         |[0m     org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration
+[36mapp         |[0m 
+[36mapp         |[0m     org.springframework.boot.autoconfigure.availability.ApplicationAvailabilityAutoConfiguration
+[36mapp         |[0m 
+[36mapp         |[0m     org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration
+[36mapp         |[0m 
+[36mapp         |[0m 
+[36mapp         |[0m 
+[36mapp         |[0m 2021-06-26 22:25:32.183  INFO 1 --- [           main] n.b.test.sec.SecurityTestApplication     : Started SecurityTestApplication in 4.665 seconds (JVM running for 6.375)
+[36mapp         |[0m 2021-06-26 22:25:32.186 DEBUG 1 --- [           main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state LivenessState changed to CORRECT
+[36mapp         |[0m 2021-06-26 22:25:32.188 DEBUG 1 --- [           main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+[33mkeycloak    |[0m Added 'kuser' to '/opt/jboss/keycloak/standalone/configuration/keycloak-add-user.json', restart server to load user
+[33mkeycloak    |[0m -b 0.0.0.0
+[33mkeycloak    |[0m =========================================================================
+[33mkeycloak    |[0m 
+[33mkeycloak    |[0m   Using PostgreSQL database
+[33mkeycloak    |[0m 
+[33mkeycloak    |[0m =========================================================================
+[33mkeycloak    |[0m 
+[33mkeycloak    |[0m [0m22:25:34,902 INFO  [org.jboss.modules] (CLI command executor) JBoss Modules version 1.11.0.Final
+[33mkeycloak    |[0m [0m[0m22:25:35,018 INFO  [org.jboss.msc] (CLI command executor) JBoss MSC version 1.4.12.Final
+[33mkeycloak    |[0m [0m[0m22:25:35,030 INFO  [org.jboss.threads] (CLI command executor) JBoss Threads version 2.4.0.Final
+[33mkeycloak    |[0m [0m[0m22:25:35,235 INFO  [org.jboss.as] (MSC service thread 1-2) WFLYSRV0049: Keycloak 13.0.1 (WildFly Core 15.0.1.Final) starting
+[33mkeycloak    |[0m [0m[0m22:25:36,322 INFO  [org.wildfly.security] (ServerService Thread Pool -- 20) ELY00001: WildFly Elytron version 1.15.3.Final
+[33mkeycloak    |[0m [0m[0m22:25:36,859 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 5) WFLYCTL0033: Extension 'security' is deprecated and may not be supported in future versions
+[33mkeycloak    |[0m [0m[0m22:25:37,185 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/core-service=management/management-interface=http-interface' is deprecated, and may be removed in a future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[33mkeycloak    |[0m [0m[0m22:25:37,358 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=undertow/server=default-server/https-listener=https' is deprecated, and may be removed in a future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[33mkeycloak    |[0m [0m[33m22:25:37,476 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-7) WFLYELY00023: KeyStore file '/opt/jboss/keycloak/standalone/configuration/application.keystore' does not exist. Used blank.
+[33mkeycloak    |[0m [0m[33m22:25:37,489 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-2) WFLYELY01084: KeyStore /opt/jboss/keycloak/standalone/configuration/application.keystore not found, it will be auto generated on first use with a self-signed certificate for host localhost
+[33mkeycloak    |[0m [0mWARNING: An illegal reflective access operation has occurred
+[33mkeycloak    |[0m WARNING: Illegal reflective access by org.wildfly.extension.elytron.SSLDefinitions (jar:file:/opt/jboss/keycloak/modules/system/layers/base/org/wildfly/extension/elytron/main/wildfly-elytron-integration-15.0.1.Final.jar!/) to method com.sun.net.ssl.internal.ssl.Provider.isFIPS()
+[33mkeycloak    |[0m WARNING: Please consider reporting this to the maintainers of org.wildfly.extension.elytron.SSLDefinitions
+[33mkeycloak    |[0m WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+[33mkeycloak    |[0m WARNING: All illegal access operations will be denied in a future release
+[33mkeycloak    |[0m [0m22:25:37,520 INFO  [org.jboss.as.patching] (MSC service thread 1-8) WFLYPAT0050: Keycloak cumulative patch ID is: base, one-off patches include: none
+[33mkeycloak    |[0m [0m[33m22:25:37,587 WARN  [org.jboss.as.domain.management.security] (MSC service thread 1-4) WFLYDM0111: Keystore /opt/jboss/keycloak/standalone/configuration/application.keystore not found, it will be auto generated on first use with a self signed certificate for host localhost
+[33mkeycloak    |[0m [0m[0m22:25:37,704 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0212: Resuming server
+[33mkeycloak    |[0m [0m[0m22:25:37,707 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: Keycloak 13.0.1 (WildFly Core 15.0.1.Final) started in 2795ms - Started 59 of 82 services (32 services are lazy, passive or on-demand)
+[33mkeycloak    |[0m [0mThe batch executed successfully
+[33mkeycloak    |[0m [0m22:25:37,933 INFO  [org.jboss.as] (MSC service thread 1-7) WFLYSRV0050: Keycloak 13.0.1 (WildFly Core 15.0.1.Final) stopped in 26ms
+[33mkeycloak    |[0m [0m[0m22:25:39,534 INFO  [org.jboss.modules] (CLI command executor) JBoss Modules version 1.11.0.Final
+[33mkeycloak    |[0m [0m[0m22:25:39,596 INFO  [org.jboss.msc] (CLI command executor) JBoss MSC version 1.4.12.Final
+[33mkeycloak    |[0m [0m[0m22:25:39,605 INFO  [org.jboss.threads] (CLI command executor) JBoss Threads version 2.4.0.Final
+[33mkeycloak    |[0m [0m[0m22:25:39,713 INFO  [org.jboss.as] (MSC service thread 1-1) WFLYSRV0049: Keycloak 13.0.1 (WildFly Core 15.0.1.Final) starting
+[33mkeycloak    |[0m [0m[0m22:25:40,572 INFO  [org.wildfly.security] (ServerService Thread Pool -- 21) ELY00001: WildFly Elytron version 1.15.3.Final
+[33mkeycloak    |[0m [0m[0m22:25:40,966 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 13) WFLYCTL0033: Extension 'security' is deprecated and may not be supported in future versions
+[33mkeycloak    |[0m [0m[0m22:25:41,415 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/core-service=management/management-interface=http-interface' is deprecated, and may be removed in a future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[33mkeycloak    |[0m [0m[0m22:25:41,579 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=undertow/server=default-server/https-listener=https' is deprecated, and may be removed in a future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[33mkeycloak    |[0m [0m[33m22:25:41,705 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-7) WFLYELY00023: KeyStore file '/opt/jboss/keycloak/standalone/configuration/application.keystore' does not exist. Used blank.
+[33mkeycloak    |[0m [0m[33m22:25:41,720 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-5) WFLYELY01084: KeyStore /opt/jboss/keycloak/standalone/configuration/application.keystore not found, it will be auto generated on first use with a self-signed certificate for host localhost
+[33mkeycloak    |[0m [0mWARNING: An illegal reflective access operation has occurred
+[33mkeycloak    |[0m WARNING: Illegal reflective access by org.wildfly.extension.elytron.SSLDefinitions (jar:file:/opt/jboss/keycloak/modules/system/layers/base/org/wildfly/extension/elytron/main/wildfly-elytron-integration-15.0.1.Final.jar!/) to method com.sun.net.ssl.internal.ssl.Provider.isFIPS()
+[33mkeycloak    |[0m WARNING: Please consider reporting this to the maintainers of org.wildfly.extension.elytron.SSLDefinitions
+[33mkeycloak    |[0m WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+[33mkeycloak    |[0m WARNING: All illegal access operations will be denied in a future release
+[33mkeycloak    |[0m [0m22:25:41,772 INFO  [org.jboss.as.patching] (MSC service thread 1-6) WFLYPAT0050: Keycloak cumulative patch ID is: base, one-off patches include: none
+[33mkeycloak    |[0m [0m[33m22:25:41,805 WARN  [org.jboss.as.domain.management.security] (MSC service thread 1-4) WFLYDM0111: Keystore /opt/jboss/keycloak/standalone/configuration/application.keystore not found, it will be auto generated on first use with a self signed certificate for host localhost
+[33mkeycloak    |[0m [0m[0m22:25:41,983 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0212: Resuming server
+[33mkeycloak    |[0m [0m[0m22:25:41,986 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: Keycloak 13.0.1 (WildFly Core 15.0.1.Final) started in 2445ms - Started 59 of 89 services (39 services are lazy, passive or on-demand)
+[33mkeycloak    |[0m [0mThe batch executed successfully
+[33mkeycloak    |[0m [0m22:25:42,231 INFO  [org.jboss.as] (MSC service thread 1-8) WFLYSRV0050: Keycloak 13.0.1 (WildFly Core 15.0.1.Final) stopped in 18ms
+[33mkeycloak    |[0m [0m=========================================================================
+[33mkeycloak    |[0m 
+[33mkeycloak    |[0m   JBoss Bootstrap Environment
+[33mkeycloak    |[0m 
+[33mkeycloak    |[0m   JBOSS_HOME: /opt/jboss/keycloak
+[33mkeycloak    |[0m 
+[33mkeycloak    |[0m   JAVA: java
+[33mkeycloak    |[0m 
+[33mkeycloak    |[0m   JAVA_OPTS:  -server -Xms64m -Xmx512m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true   --add-exports=java.base/sun.nio.ch=ALL-UNNAMED --add-exports=jdk.unsupported/sun.misc=ALL-UNNAMED --add-exports=jdk.unsupported/sun.reflect=ALL-UNNAMED
+[33mkeycloak    |[0m 
+[33mkeycloak    |[0m =========================================================================
+[33mkeycloak    |[0m 
+[33mkeycloak    |[0m [0m22:25:43,226 INFO  [org.jboss.modules] (main) JBoss Modules version 1.11.0.Final
+[33mkeycloak    |[0m [0m[0m22:25:43,797 INFO  [org.jboss.msc] (main) JBoss MSC version 1.4.12.Final
+[33mkeycloak    |[0m [0m[0m22:25:43,806 INFO  [org.jboss.threads] (main) JBoss Threads version 2.4.0.Final
+[33mkeycloak    |[0m [0m[0m22:25:43,936 INFO  [org.jboss.as] (MSC service thread 1-2) WFLYSRV0049: Keycloak 13.0.1 (WildFly Core 15.0.1.Final) starting
+[33mkeycloak    |[0m [0m[0m22:25:44,845 INFO  [org.wildfly.security] (ServerService Thread Pool -- 22) ELY00001: WildFly Elytron version 1.15.3.Final
+[33mkeycloak    |[0m [0m[0m22:25:45,252 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 14) WFLYCTL0033: Extension 'security' is deprecated and may not be supported in future versions
+[33mkeycloak    |[0m [0m[0m22:25:45,603 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/core-service=management/management-interface=http-interface' is deprecated, and may be removed in a future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[33mkeycloak    |[0m [0m[0m22:25:45,667 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 10) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=undertow/server=default-server/https-listener=https' is deprecated, and may be removed in a future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[33mkeycloak    |[0m [0m[0m22:25:45,852 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+[33mkeycloak    |[0m [0m[0m22:25:45,872 INFO  [org.xnio] (MSC service thread 1-8) XNIO version 3.8.4.Final
+[33mkeycloak    |[0m [0m[0m22:25:45,882 INFO  [org.xnio.nio] (MSC service thread 1-8) XNIO NIO Implementation Version 3.8.4.Final
+[33mkeycloak    |[0m [0m[0m22:25:45,957 INFO  [org.jboss.remoting] (MSC service thread 1-5) JBoss Remoting version 5.0.20.Final
+[33mkeycloak    |[0m [0m[0m22:25:46,030 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 39) WFLYCLINF0001: Activating Infinispan subsystem.
+[33mkeycloak    |[0m [0m[0m22:25:46,039 INFO  [org.wildfly.extension.health] (ServerService Thread Pool -- 38) WFLYHEALTH0001: Activating Base Health Subsystem
+[33mkeycloak    |[0m [0m[33m22:25:46,043 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 55) WFLYTX0013: The node-identifier attribute on the /subsystem=transactions is set to the default value. This is a danger for environments running multiple servers. Please make sure the attribute value is unique.
+[33mkeycloak    |[0m [0m[0m22:25:46,048 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 53) WFLYSEC0002: Activating Security Subsystem
+[33mkeycloak    |[0m [0m[0m22:25:46,049 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 50) WFLYNAM0001: Activating Naming Subsystem
+[33mkeycloak    |[0m [0m[0m22:25:46,064 INFO  [org.jboss.as.security] (MSC service thread 1-2) WFLYSEC0001: Current PicketBox version=5.0.3.Final-redhat-00007
+[33mkeycloak    |[0m [0m[0m22:25:46,085 INFO  [org.jboss.as.jaxrs] (ServerService Thread Pool -- 41) WFLYRS0016: RESTEasy version 3.15.1.Final
+[33mkeycloak    |[0m [0m[0m22:25:46,103 INFO  [org.wildfly.extension.metrics] (ServerService Thread Pool -- 48) WFLYMETRICS0001: Activating Base Metrics Subsystem
+[33mkeycloak    |[0m [0m[0m22:25:46,112 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 33) WFLYJCA0004: Deploying JDBC-compliant driver class org.h2.Driver (version 1.4)
+[33mkeycloak    |[0m [0m[0m22:25:46,121 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) WFLYUT0003: Undertow 2.2.5.Final starting
+[33mkeycloak    |[0m [0m[0m22:25:46,123 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 40) WFLYIO001: Worker 'default' has auto-configured to 8 IO threads with 64 max task threads based on your 4 available processors
+[33mkeycloak    |[0m [0m[0m22:25:46,131 INFO  [org.jboss.as.clustering.jgroups] (ServerService Thread Pool -- 43) WFLYCLJG0001: Activating JGroups subsystem. JGroups version 4.2.11
+[33mkeycloak    |[0m [0m[0m22:25:46,169 INFO  [org.jboss.as.connector] (MSC service thread 1-6) WFLYJCA0009: Starting Jakarta Connectors Subsystem (WildFly/IronJacamar 1.4.27.Final)
+[33mkeycloak    |[0m [0m[0m22:25:46,247 INFO  [org.jboss.as.naming] (MSC service thread 1-6) WFLYNAM0003: Starting Naming Service
+[33mkeycloak    |[0m [0m[0m22:25:46,266 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-3) WFLYJCA0018: Started Driver service with driver-name = h2
+[33mkeycloak    |[0m [0m[33m22:25:46,290 WARN  [org.wildfly.clustering.web.undertow] (ServerService Thread Pool -- 56) WFLYCLWEBUT0007: No routing provider found for default-server; using legacy provider based on static configuration
+[33mkeycloak    |[0m [0m[0m22:25:46,304 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 33) WFLYJCA0005: Deploying non-JDBC-compliant driver class org.postgresql.Driver (version 42.2)
+[33mkeycloak    |[0m [0m[0m22:25:46,308 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-5) WFLYMAIL0001: Bound mail session [java:jboss/mail/Default]
+[33mkeycloak    |[0m [0m[33m22:25:46,321 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-1) WFLYELY00023: KeyStore file '/opt/jboss/keycloak/standalone/configuration/application.keystore' does not exist. Used blank.
+[33mkeycloak    |[0m [0m[0m22:25:46,360 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-5) WFLYJCA0018: Started Driver service with driver-name = postgresql
+[33mkeycloak    |[0m [0m[33m22:25:46,416 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-1) WFLYELY01084: KeyStore /opt/jboss/keycloak/standalone/configuration/application.keystore not found, it will be auto generated on first use with a self-signed certificate for host localhost
+[33mkeycloak    |[0m [0mWARNING: An illegal reflective access operation has occurred
+[33mkeycloak    |[0m WARNING: Illegal reflective access by org.wildfly.extension.elytron.SSLDefinitions (jar:file:/opt/jboss/keycloak/modules/system/layers/base/org/wildfly/extension/elytron/main/wildfly-elytron-integration-15.0.1.Final.jar!/) to method com.sun.net.ssl.internal.ssl.Provider.isFIPS()
+[33mkeycloak    |[0m WARNING: Please consider reporting this to the maintainers of org.wildfly.extension.elytron.SSLDefinitions
+[33mkeycloak    |[0m WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+[33mkeycloak    |[0m WARNING: All illegal access operations will be denied in a future release
+[33mkeycloak    |[0m [0m22:25:46,448 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 56) WFLYUT0014: Creating file handler for path '/opt/jboss/keycloak/welcome-content' with options [directory-listing: 'false', follow-symlink: 'false', case-sensitive: 'true', safe-symlink-paths: '[]']
+[33mkeycloak    |[0m [0m[0m22:25:46,526 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0012: Started server default-server.
+[33mkeycloak    |[0m [0m[0m22:25:46,529 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) Queuing requests.
+[33mkeycloak    |[0m [0m[0m22:25:46,530 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0018: Host default-host starting
+[33mkeycloak    |[0m [0m[0m22:25:46,559 INFO  [org.jboss.as.ejb3] (MSC service thread 1-4) WFLYEJB0482: Strict pool mdb-strict-max-pool is using a max instance size of 16 (per class), which is derived from the number of CPUs on this host.
+[33mkeycloak    |[0m [0m[0m22:25:46,559 INFO  [org.jboss.as.ejb3] (MSC service thread 1-6) WFLYEJB0481: Strict pool slsb-strict-max-pool is using a max instance size of 64 (per class), which is derived from thread worker pool sizing.
+[33mkeycloak    |[0m [0m[0m22:25:46,604 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0006: Undertow AJP listener ajp listening on 0.0.0.0:8009
+[33mkeycloak    |[0m [0m[0m22:25:46,621 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0006: Undertow HTTP listener default listening on 0.0.0.0:8080
+[33mkeycloak    |[0m [0m[0m22:25:46,633 INFO  [org.jboss.modcluster] (ServerService Thread Pool -- 58) MODCLUSTER000001: Initializing mod_cluster version 1.4.3.Final
+[33mkeycloak    |[0m [0m[0m22:25:46,645 INFO  [org.jboss.modcluster] (ServerService Thread Pool -- 58) MODCLUSTER000032: Listening to proxy advertisements on /224.0.1.105:23364
+[33mkeycloak    |[0m [0m[0m22:25:46,912 INFO  [org.jboss.as.ejb3] (MSC service thread 1-4) WFLYEJB0493: Jakarta Enterprise Beans subsystem suspension complete
+[33mkeycloak    |[0m [0m[0m22:25:46,979 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-3) WFLYJCA0001: Bound data source [java:jboss/datasources/ExampleDS]
+[33mkeycloak    |[0m [0m[0m22:25:46,980 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-6) WFLYJCA0001: Bound data source [java:jboss/datasources/KeycloakDS]
+[33mkeycloak    |[0m [0m[0m22:25:47,314 INFO  [org.jboss.as.patching] (MSC service thread 1-1) WFLYPAT0050: Keycloak cumulative patch ID is: base, one-off patches include: none
+[33mkeycloak    |[0m [0m[33m22:25:47,343 WARN  [org.jboss.as.domain.management.security] (MSC service thread 1-4) WFLYDM0111: Keystore /opt/jboss/keycloak/standalone/configuration/application.keystore not found, it will be auto generated on first use with a self signed certificate for host localhost
+[33mkeycloak    |[0m [0m[0m22:25:47,363 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-3) WFLYDS0013: Started FileSystemDeploymentService for directory /opt/jboss/keycloak/standalone/deployments
+[33mkeycloak    |[0m [0m[0m22:25:47,380 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0027: Starting deployment of "keycloak-server.war" (runtime-name: "keycloak-server.war")
+[33mkeycloak    |[0m [0m[0m22:25:47,399 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0006: Undertow HTTPS listener https listening on 0.0.0.0:8443
+[33mkeycloak    |[0m [0m[33m22:25:47,998 WARN  [org.jgroups.protocols.UDP] (ServerService Thread Pool -- 58) JGRP000015: the send buffer of socket ManagedMulticastSocketBinding was set to 1.00MB, but the OS only allocated 212.99KB
+[33mkeycloak    |[0m [0m[33m22:25:47,998 WARN  [org.jgroups.protocols.UDP] (ServerService Thread Pool -- 58) JGRP000015: the receive buffer of socket ManagedMulticastSocketBinding was set to 20.00MB, but the OS only allocated 212.99KB
+[33mkeycloak    |[0m [0m[33m22:25:47,999 WARN  [org.jgroups.protocols.UDP] (ServerService Thread Pool -- 58) JGRP000015: the send buffer of socket ManagedMulticastSocketBinding was set to 1.00MB, but the OS only allocated 212.99KB
+[33mkeycloak    |[0m [0m[33m22:25:47,999 WARN  [org.jgroups.protocols.UDP] (ServerService Thread Pool -- 58) JGRP000015: the receive buffer of socket ManagedMulticastSocketBinding was set to 25.00MB, but the OS only allocated 212.99KB
+[33mkeycloak    |[0m [0m[0m22:25:51,013 INFO  [org.jgroups.protocols.pbcast.GMS] (ServerService Thread Pool -- 58) b51e9875a4c6: no members discovered after 3003 ms: creating cluster as coordinator
+[33mkeycloak    |[0m [0m[0m22:25:51,695 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 62) ISPN000128: Infinispan version: Infinispan 'Corona Extra' 11.0.9.Final
+[33mkeycloak    |[0m [0m[0m22:25:51,726 INFO  [org.infinispan.PERSISTENCE] (ServerService Thread Pool -- 62) ISPN000556: Starting user marshaller 'org.wildfly.clustering.infinispan.marshalling.jboss.JBossMarshaller'
+[33mkeycloak    |[0m [0m[0m22:25:51,797 INFO  [org.infinispan.PERSISTENCE] (ServerService Thread Pool -- 61) ISPN000556: Starting user marshaller 'org.wildfly.clustering.infinispan.spi.marshalling.InfinispanProtoStreamMarshaller'
+[33mkeycloak    |[0m [0m[0m22:25:51,797 INFO  [org.infinispan.PERSISTENCE] (ServerService Thread Pool -- 60) ISPN000556: Starting user marshaller 'org.wildfly.clustering.infinispan.spi.marshalling.InfinispanProtoStreamMarshaller'
+[33mkeycloak    |[0m [0m[0m22:25:51,798 INFO  [org.infinispan.PERSISTENCE] (ServerService Thread Pool -- 59) ISPN000556: Starting user marshaller 'org.wildfly.clustering.infinispan.marshalling.jboss.JBossMarshaller'
+[33mkeycloak    |[0m [0m[0m22:25:51,800 INFO  [org.infinispan.PERSISTENCE] (ServerService Thread Pool -- 58) ISPN000556: Starting user marshaller 'org.wildfly.clustering.infinispan.spi.marshalling.InfinispanProtoStreamMarshaller'
+[33mkeycloak    |[0m [0m[0m22:25:51,905 INFO  [org.infinispan.CLUSTER] (ServerService Thread Pool -- 61) ISPN000078: Starting JGroups channel ejb
+[33mkeycloak    |[0m [0m[0m22:25:51,905 INFO  [org.infinispan.CLUSTER] (ServerService Thread Pool -- 62) ISPN000078: Starting JGroups channel ejb
+[33mkeycloak    |[0m [0m[0m22:25:51,909 INFO  [org.infinispan.CLUSTER] (ServerService Thread Pool -- 60) ISPN000078: Starting JGroups channel ejb
+[33mkeycloak    |[0m [0m[0m22:25:51,913 INFO  [org.infinispan.CLUSTER] (ServerService Thread Pool -- 58) ISPN000078: Starting JGroups channel ejb
+[33mkeycloak    |[0m [0m[0m22:25:51,913 INFO  [org.infinispan.CLUSTER] (ServerService Thread Pool -- 59) ISPN000078: Starting JGroups channel ejb
+[33mkeycloak    |[0m [0m[0m22:25:51,911 INFO  [org.infinispan.CLUSTER] (ServerService Thread Pool -- 61) ISPN000094: Received new cluster view for channel ejb: [b51e9875a4c6|0] (1) [b51e9875a4c6]
+[33mkeycloak    |[0m [0m[0m22:25:51,919 INFO  [org.infinispan.CLUSTER] (ServerService Thread Pool -- 60) ISPN000094: Received new cluster view for channel ejb: [b51e9875a4c6|0] (1) [b51e9875a4c6]
+[33mkeycloak    |[0m [0m[0m22:25:51,919 INFO  [org.infinispan.CLUSTER] (ServerService Thread Pool -- 59) ISPN000094: Received new cluster view for channel ejb: [b51e9875a4c6|0] (1) [b51e9875a4c6]
+[33mkeycloak    |[0m [0m[0m22:25:51,920 INFO  [org.infinispan.CLUSTER] (ServerService Thread Pool -- 58) ISPN000094: Received new cluster view for channel ejb: [b51e9875a4c6|0] (1) [b51e9875a4c6]
+[33mkeycloak    |[0m [0m[0m22:25:51,919 INFO  [org.infinispan.CLUSTER] (ServerService Thread Pool -- 62) ISPN000094: Received new cluster view for channel ejb: [b51e9875a4c6|0] (1) [b51e9875a4c6]
+[33mkeycloak    |[0m [0m[0m22:25:51,932 INFO  [org.infinispan.CLUSTER] (ServerService Thread Pool -- 61) ISPN000079: Channel ejb local address is b51e9875a4c6, physical addresses are [172.25.0.4:55200]
+[33mkeycloak    |[0m [0m[0m22:25:51,935 INFO  [org.infinispan.CLUSTER] (ServerService Thread Pool -- 62) ISPN000079: Channel ejb local address is b51e9875a4c6, physical addresses are [172.25.0.4:55200]
+[33mkeycloak    |[0m [0m[0m22:25:51,942 INFO  [org.infinispan.CLUSTER] (ServerService Thread Pool -- 58) ISPN000079: Channel ejb local address is b51e9875a4c6, physical addresses are [172.25.0.4:55200]
+[33mkeycloak    |[0m [0m[0m22:25:51,942 INFO  [org.infinispan.CLUSTER] (ServerService Thread Pool -- 60) ISPN000079: Channel ejb local address is b51e9875a4c6, physical addresses are [172.25.0.4:55200]
+[33mkeycloak    |[0m [0m[0m22:25:51,947 INFO  [org.infinispan.CLUSTER] (ServerService Thread Pool -- 59) ISPN000079: Channel ejb local address is b51e9875a4c6, physical addresses are [172.25.0.4:55200]
+[33mkeycloak    |[0m [0m[0m22:25:52,000 INFO  [org.infinispan.CONFIG] (MSC service thread 1-4) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+[33mkeycloak    |[0m [0m[0m22:25:52,018 INFO  [org.infinispan.CONFIG] (MSC service thread 1-4) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+[33mkeycloak    |[0m [0m[0m22:25:52,297 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 59) WFLYCLINF0002: Started http-remoting-connector cache from ejb container
+[33mkeycloak    |[0m [0m[0m22:25:52,412 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 67) WFLYCLINF0002: Started actionTokens cache from keycloak container
+[33mkeycloak    |[0m [0m[0m22:25:52,415 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 60) WFLYCLINF0002: Started work cache from keycloak container
+[33mkeycloak    |[0m [0m[0m22:25:52,418 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 63) WFLYCLINF0002: Started clientSessions cache from keycloak container
+[33mkeycloak    |[0m [0m[0m22:25:52,421 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 68) WFLYCLINF0002: Started offlineClientSessions cache from keycloak container
+[33mkeycloak    |[0m [0m[0m22:25:52,428 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 64) WFLYCLINF0002: Started loginFailures cache from keycloak container
+[33mkeycloak    |[0m [0m[0m22:25:52,432 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 62) WFLYCLINF0002: Started authenticationSessions cache from keycloak container
+[33mkeycloak    |[0m [0m[0m22:25:52,436 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 70) WFLYCLINF0002: Started offlineSessions cache from keycloak container
+[33mkeycloak    |[0m [0m[0m22:25:52,467 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 69) WFLYCLINF0002: Started sessions cache from keycloak container
+[33mkeycloak    |[0m [0m[0m22:25:52,473 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 61) WFLYCLINF0002: Started realms cache from keycloak container
+[33mkeycloak    |[0m [0m[0m22:25:52,474 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 66) WFLYCLINF0002: Started keys cache from keycloak container
+[33mkeycloak    |[0m [0m[0m22:25:52,475 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 58) WFLYCLINF0002: Started users cache from keycloak container
+[33mkeycloak    |[0m [0m[0m22:25:52,476 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 65) WFLYCLINF0002: Started authorization cache from keycloak container
+[33mkeycloak    |[0m [0m[33m22:25:52,706 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0273: Excluded subsystem webservices via jboss-deployment-structure.xml does not exist.
+[33mkeycloak    |[0m [0m[0m22:25:53,435 INFO  [org.keycloak.services] (ServerService Thread Pool -- 58) KC-SERVICES0001: Loading config from standalone.xml or domain.xml
+[33mkeycloak    |[0m [0m[0m22:25:53,952 INFO  [org.keycloak.url.DefaultHostnameProviderFactory] (ServerService Thread Pool -- 58) Frontend: <request>, Admin: <frontend>, Backend: <request>
+[33mkeycloak    |[0m [0m[0m22:25:54,138 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 58) WFLYCLINF0002: Started realmRevisions cache from keycloak container
+[33mkeycloak    |[0m [0m[0m22:25:54,145 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 58) WFLYCLINF0002: Started userRevisions cache from keycloak container
+[33mkeycloak    |[0m [0m[0m22:25:54,177 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 58) WFLYCLINF0002: Started authorizationRevisions cache from keycloak container
+[33mkeycloak    |[0m [0m[0m22:25:54,180 INFO  [org.keycloak.connections.infinispan.DefaultInfinispanConnectionProviderFactory] (ServerService Thread Pool -- 58) Node name: b51e9875a4c6, Site name: null
+[33mkeycloak    |[0m [0m[0m22:25:54,409 INFO  [org.keycloak.connections.jpa.DefaultJpaConnectionProviderFactory] (ServerService Thread Pool -- 58) Database info: {databaseUrl=jdbc:postgresql://postgres:5432/keycloak, databaseUser=keycloak, databaseProduct=PostgreSQL 13.3 (Debian 13.3-1.pgdg100+1), databaseDriver=PostgreSQL JDBC Driver 42.2.5}
+[33mkeycloak    |[0m [0m[0m22:25:57,441 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 58) HHH000204: Processing PersistenceUnitInfo [
+[33mkeycloak    |[0m 	name: keycloak-default
+[33mkeycloak    |[0m 	...]
+[33mkeycloak    |[0m [0m[0m22:25:57,566 INFO  [org.hibernate.Version] (ServerService Thread Pool -- 58) HHH000412: Hibernate Core {5.3.20.Final}
+[33mkeycloak    |[0m [0m[0m22:25:57,568 INFO  [org.hibernate.cfg.Environment] (ServerService Thread Pool -- 58) HHH000206: hibernate.properties not found
+[33mkeycloak    |[0m [0m[0m22:25:57,838 INFO  [org.hibernate.annotations.common.Version] (ServerService Thread Pool -- 58) HCANN000001: Hibernate Commons Annotations {5.0.5.Final}
+[33mkeycloak    |[0m [0m[0m22:25:58,071 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 58) HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+[33mkeycloak    |[0m [0m[0m22:25:58,305 INFO  [org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl] (ServerService Thread Pool -- 58) HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+[33mkeycloak    |[0m [0m[0m22:25:58,310 INFO  [org.hibernate.type.BasicTypeRegistry] (ServerService Thread Pool -- 58) HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@23dda33f
+[33mkeycloak    |[0m [0m[0m22:25:58,317 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (ServerService Thread Pool -- 58) Envers integration enabled? : true
+[33mkeycloak    |[0m [0m[0m22:25:58,982 INFO  [org.hibernate.orm.beans] (ServerService Thread Pool -- 58) HHH10005002: No explicit CDI BeanManager reference was passed to Hibernate, but CDI is available on the Hibernate ClassLoader.
+[33mkeycloak    |[0m [0m[0m22:25:59,048 INFO  [org.hibernate.validator.internal.util.Version] (ServerService Thread Pool -- 58) HV000001: Hibernate Validator 6.0.22.Final
+[33mkeycloak    |[0m [0m[0m22:26:00,370 INFO  [org.hibernate.hql.internal.QueryTranslatorFactoryInitiator] (ServerService Thread Pool -- 58) HHH000397: Using ASTQueryTranslatorFactory
+[33mkeycloak    |[0m [0m[0m22:26:01,211 INFO  [org.keycloak.services] (ServerService Thread Pool -- 58) KC-SERVICES0006: Importing users from '/opt/jboss/keycloak/standalone/configuration/keycloak-add-user.json'
+[33mkeycloak    |[0m [0m[33m22:26:01,378 WARN  [org.keycloak.services] (ServerService Thread Pool -- 58) KC-SERVICES0104: Not creating user kuser. It already exists.
+[33mkeycloak    |[0m [0m[0m22:26:01,439 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 58) RESTEASY002225: Deploying javax.ws.rs.core.Application: class org.keycloak.services.resources.KeycloakApplication
+[33mkeycloak    |[0m [0m[0m22:26:01,441 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 58) RESTEASY002200: Adding class resource org.keycloak.services.resources.ThemeResource from Application class org.keycloak.services.resources.KeycloakApplication
+[33mkeycloak    |[0m [0m[0m22:26:01,442 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 58) RESTEASY002205: Adding provider class org.keycloak.services.filters.KeycloakSecurityHeadersFilter from Application class org.keycloak.services.resources.KeycloakApplication
+[33mkeycloak    |[0m [0m[0m22:26:01,442 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 58) RESTEASY002205: Adding provider class org.keycloak.services.error.KeycloakErrorHandler from Application class org.keycloak.services.resources.KeycloakApplication
+[33mkeycloak    |[0m [0m[0m22:26:01,442 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 58) RESTEASY002200: Adding class resource org.keycloak.services.resources.JsResource from Application class org.keycloak.services.resources.KeycloakApplication
+[33mkeycloak    |[0m [0m[0m22:26:01,442 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 58) RESTEASY002220: Adding singleton resource org.keycloak.services.resources.RealmsResource from Application class org.keycloak.services.resources.KeycloakApplication
+[33mkeycloak    |[0m [0m[0m22:26:01,442 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 58) RESTEASY002220: Adding singleton resource org.keycloak.services.resources.WelcomeResource from Application class org.keycloak.services.resources.KeycloakApplication
+[33mkeycloak    |[0m [0m[0m22:26:01,442 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 58) RESTEASY002220: Adding singleton resource org.keycloak.services.resources.RobotsResource from Application class org.keycloak.services.resources.KeycloakApplication
+[33mkeycloak    |[0m [0m[0m22:26:01,443 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 58) RESTEASY002220: Adding singleton resource org.keycloak.services.resources.admin.AdminRoot from Application class org.keycloak.services.resources.KeycloakApplication
+[33mkeycloak    |[0m [0m[0m22:26:01,443 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 58) RESTEASY002210: Adding provider singleton org.keycloak.services.util.ObjectMapperResolver from Application class org.keycloak.services.resources.KeycloakApplication
+[33mkeycloak    |[0m [0m[0m22:26:01,550 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 58) WFLYUT0021: Registered web context: '/auth' for server 'default-server'
+[33mkeycloak    |[0m [0m[0m22:26:01,734 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 46) WFLYSRV0010: Deployed "keycloak-server.war" (runtime-name : "keycloak-server.war")
+[33mkeycloak    |[0m [0m[0m22:26:01,818 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0212: Resuming server
+[33mkeycloak    |[0m [0m[0m22:26:01,822 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: Keycloak 13.0.1 (WildFly Core 15.0.1.Final) started in 19080ms - Started 693 of 978 services (686 services are lazy, passive or on-demand)
+[33mkeycloak    |[0m [0m[0m22:26:01,825 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://127.0.0.1:9990/management
+[33mkeycloak    |[0m [0m[0m22:26:01,825 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://127.0.0.1:9990
+[36mapp         |[0m 2021-06-26 22:26:16.005 DEBUG 1 --- [nio-8080-exec-1] o.k.adapters.PreAuthActionsHandler       : adminRequest http://keycloak:8090/auth/realms/master/protocol/openid-connect/logout?redirect_uri=http%3A%2F%2Fkeycloak%3A8090%2Fauth%2Fadmin%2Fmaster%2Fconsole%2F%23%2Frealms%2FSpringBootKeycloak%2Fevents
+[36mapp         |[0m 2021-06-26 22:26:16.013 DEBUG 1 --- [nio-8080-exec-1] o.k.a.a.ClientCredentialsProviderUtils   : Using provider 'secret' for authentication of client 'test-app'
+[36mapp         |[0m 2021-06-26 22:26:16.016 DEBUG 1 --- [nio-8080-exec-1] o.k.a.a.ClientCredentialsProviderUtils   : Loaded clientCredentialsProvider secret
+[36mapp         |[0m 2021-06-26 22:26:16.017 DEBUG 1 --- [nio-8080-exec-1] o.k.a.a.ClientCredentialsProviderUtils   : Loaded clientCredentialsProvider jwt
+[36mapp         |[0m 2021-06-26 22:26:16.018 DEBUG 1 --- [nio-8080-exec-1] o.k.a.a.ClientCredentialsProviderUtils   : Loaded clientCredentialsProvider secret-jwt
+[36mapp         |[0m 2021-06-26 22:26:16.019 DEBUG 1 --- [nio-8080-exec-1] o.k.a.a.ClientCredentialsProviderUtils   : Loaded clientCredentialsProvider secret
+[36mapp         |[0m 2021-06-26 22:26:16.019 DEBUG 1 --- [nio-8080-exec-1] o.k.a.a.ClientCredentialsProviderUtils   : Loaded clientCredentialsProvider jwt
+[36mapp         |[0m 2021-06-26 22:26:16.020 DEBUG 1 --- [nio-8080-exec-1] o.k.a.a.ClientCredentialsProviderUtils   : Loaded clientCredentialsProvider secret-jwt
+[36mapp         |[0m 2021-06-26 22:26:16.030 DEBUG 1 --- [nio-8080-exec-1] .k.a.t.AbstractAuthenticatedActionsValve : AuthenticatedActionsValve.invoke /auth/realms/master/protocol/openid-connect/logout
+[36mapp         |[0m 2021-06-26 22:26:16.032 DEBUG 1 --- [nio-8080-exec-1] o.k.a.AuthenticatedActionsHandler        : AuthenticatedActionsValve.invoke http://keycloak:8090/auth/realms/master/protocol/openid-connect/logout?redirect_uri=http%3A%2F%2Fkeycloak%3A8090%2Fauth%2Fadmin%2Fmaster%2Fconsole%2F%23%2Frealms%2FSpringBootKeycloak%2Fevents
+[36mapp         |[0m 2021-06-26 22:26:16.032 DEBUG 1 --- [nio-8080-exec-1] o.k.a.AuthenticatedActionsHandler        : Policy enforcement is disabled.
+[36mapp         |[0m 2021-06-26 22:26:16.035  INFO 1 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+[36mapp         |[0m 2021-06-26 22:26:16.035  INFO 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+[36mapp         |[0m 2021-06-26 22:26:16.035 DEBUG 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+[36mapp         |[0m 2021-06-26 22:26:16.035 DEBUG 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+[36mapp         |[0m 2021-06-26 22:26:16.035 DEBUG 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+[36mapp         |[0m 2021-06-26 22:26:16.036 DEBUG 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@6e444b9e
+[36mapp         |[0m 2021-06-26 22:26:16.037 DEBUG 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@4856a8f4
+[36mapp         |[0m 2021-06-26 22:26:16.037 DEBUG 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+[36mapp         |[0m 2021-06-26 22:26:16.037  INFO 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+[36mapp         |[0m 2021-06-26 22:26:16.072 DEBUG 1 --- [nio-8080-exec-1] o.k.adapters.PreAuthActionsHandler       : adminRequest http://keycloak:8090/auth/realms/master/protocol/openid-connect/logout?redirect_uri=http%3A%2F%2Fkeycloak%3A8090%2Fauth%2Fadmin%2Fmaster%2Fconsole%2F%23%2Frealms%2FSpringBootKeycloak%2Fevents
+[36mapp         |[0m 2021-06-26 22:26:16.075 DEBUG 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/auth/realms/master/protocol/openid-connect/logout?redirect_uri=http%3A%2F%2Fkeycloak%3A8090%2Fauth%2Fadmin%2Fmaster%2Fconsole%2F%23%2Frealms%2FSpringBootKeycloak%2Fevents", parameters={masked}
+[36mapp         |[0m 2021-06-26 22:26:16.087 DEBUG 1 --- [nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+[36mapp         |[0m 2021-06-26 22:26:16.091 DEBUG 1 --- [nio-8080-exec-1] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+[36mapp         |[0m 2021-06-26 22:26:16.092 DEBUG 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+[36mapp         |[0m 2021-06-26 22:26:16.095 DEBUG 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error?redirect_uri=http%3A%2F%2Fkeycloak%3A8090%2Fauth%2Fadmin%2Fmaster%2Fconsole%2F%23%2Frealms%2FSpringBootKeycloak%2Fevents", parameters={masked}
+[36mapp         |[0m 2021-06-26 22:26:16.099 DEBUG 1 --- [nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+[36mapp         |[0m 2021-06-26 22:26:16.138 DEBUG 1 --- [nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, text/html;q=0.8]
+[36mapp         |[0m 2021-06-26 22:26:16.145 DEBUG 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+[36mapp         |[0m 2021-06-26 22:26:16.280 DEBUG 1 --- [nio-8080-exec-3] o.k.adapters.PreAuthActionsHandler       : adminRequest http://keycloak:8090/favicon.ico
+[36mapp         |[0m 2021-06-26 22:26:16.281 DEBUG 1 --- [nio-8080-exec-3] .k.a.t.AbstractAuthenticatedActionsValve : AuthenticatedActionsValve.invoke /favicon.ico
+[36mapp         |[0m 2021-06-26 22:26:16.281 DEBUG 1 --- [nio-8080-exec-3] o.k.a.AuthenticatedActionsHandler        : AuthenticatedActionsValve.invoke http://keycloak:8090/favicon.ico
+[36mapp         |[0m 2021-06-26 22:26:16.281 DEBUG 1 --- [nio-8080-exec-3] o.k.a.AuthenticatedActionsHandler        : Policy enforcement is disabled.
+[36mapp         |[0m 2021-06-26 22:26:16.282 DEBUG 1 --- [nio-8080-exec-3] o.k.adapters.PreAuthActionsHandler       : adminRequest http://keycloak:8090/favicon.ico
+[36mapp         |[0m 2021-06-26 22:26:16.282 DEBUG 1 --- [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/favicon.ico", parameters={}
+[36mapp         |[0m 2021-06-26 22:26:16.283 DEBUG 1 --- [nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+[36mapp         |[0m 2021-06-26 22:26:16.284 DEBUG 1 --- [nio-8080-exec-3] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+[36mapp         |[0m 2021-06-26 22:26:16.284 DEBUG 1 --- [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+[36mapp         |[0m 2021-06-26 22:26:16.285 DEBUG 1 --- [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+[36mapp         |[0m 2021-06-26 22:26:16.285 DEBUG 1 --- [nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+[36mapp         |[0m 2021-06-26 22:26:16.320 DEBUG 1 --- [nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [image/webp, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+[36mapp         |[0m 2021-06-26 22:26:16.321 DEBUG 1 --- [nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Sat Jun 26 22:26:16 UTC 2021, status=404, error=Not Found, path=/favicon.ico}]
+[36mapp         |[0m 2021-06-26 22:26:16.396 DEBUG 1 --- [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+[36mapp         |[0m 2021-06-26 22:27:57.967 DEBUG 1 --- [nio-8080-exec-4] o.k.adapters.PreAuthActionsHandler       : adminRequest http://localhost:8090/terms/bliep
+[36mapp         |[0m 2021-06-26 22:27:57.968 DEBUG 1 --- [nio-8080-exec-4] .k.a.t.AbstractAuthenticatedActionsValve : AuthenticatedActionsValve.invoke /terms/bliep
+[36mapp         |[0m 2021-06-26 22:27:57.968 DEBUG 1 --- [nio-8080-exec-4] o.k.a.AuthenticatedActionsHandler        : AuthenticatedActionsValve.invoke http://localhost:8090/terms/bliep
+[36mapp         |[0m 2021-06-26 22:27:57.968 DEBUG 1 --- [nio-8080-exec-4] o.k.a.AuthenticatedActionsHandler        : Policy enforcement is disabled.
+[36mapp         |[0m 2021-06-26 22:27:57.971 DEBUG 1 --- [nio-8080-exec-4] f.KeycloakAuthenticationProcessingFilter : Attempting Keycloak authentication
+[36mapp         |[0m 2021-06-26 22:27:57.977 DEBUG 1 --- [nio-8080-exec-4] o.k.a.BearerTokenRequestAuthenticator    : Found [1] values in authorization header, selecting the first value for Bearer.
+[36mapp         |[0m 2021-06-26 22:27:57.977 DEBUG 1 --- [nio-8080-exec-4] o.k.a.BearerTokenRequestAuthenticator    : Verifying access_token
+[36mapp         |[0m 2021-06-26 22:27:57.983 DEBUG 1 --- [nio-8080-exec-4] o.keycloak.adapters.KeycloakDeployment   : Resolving URLs from http://keycloak:8080/auth/realms/SpringBootKeycloak/.well-known/openid-configuration
+[36mapp         |[0m 2021-06-26 22:27:58.991  INFO 1 --- [nio-8080-exec-4] o.keycloak.adapters.KeycloakDeployment   : Loaded URLs from http://keycloak:8080/auth/realms/SpringBootKeycloak/.well-known/openid-configuration
+[36mapp         |[0m 2021-06-26 22:27:59.063 DEBUG 1 --- [nio-8080-exec-4] o.k.a.rotation.JWKPublicKeyLocator       : Realm public keys successfully retrieved for client test-app. New kids: [3cru4YuTHMmwiGeUz29ZidFjNT4d4O3JiUIy4a98GzI]
+[36mapp         |[0m 2021-06-26 22:27:59.086 DEBUG 1 --- [nio-8080-exec-4] o.k.a.BearerTokenRequestAuthenticator    : successful authorized
+[36mapp         |[0m 2021-06-26 22:27:59.089 DEBUG 1 --- [nio-8080-exec-4] a.s.a.SpringSecurityRequestAuthenticator : Completing bearer authentication. Bearer roles: [default-roles-springbootkeycloak, offline_access, uma_authorization, USER] 
+[36mapp         |[0m 2021-06-26 22:27:59.089 DEBUG 1 --- [nio-8080-exec-4] o.k.adapters.RequestAuthenticator        : User '426441b8-c8d8-44f1-a895-782d35b379c1' invoking 'http://localhost:8090/terms/bliep' on client 'test-app'
+[36mapp         |[0m 2021-06-26 22:27:59.089 DEBUG 1 --- [nio-8080-exec-4] o.k.adapters.RequestAuthenticator        : Bearer AUTHENTICATED
+[36mapp         |[0m 2021-06-26 22:27:59.090 DEBUG 1 --- [nio-8080-exec-4] f.KeycloakAuthenticationProcessingFilter : Auth outcome: AUTHENTICATED
+[36mapp         |[0m 2021-06-26 22:27:59.100 DEBUG 1 --- [nio-8080-exec-4] f.KeycloakAuthenticationProcessingFilter : Authentication success using bearer token/basic authentication. Updating SecurityContextHolder to contain: KeycloakAuthenticationToken [Principal=426441b8-c8d8-44f1-a895-782d35b379c1, Credentials=[PROTECTED], Authenticated=true, Details=org.keycloak.adapters.springsecurity.account.SimpleKeycloakAccount@59710c17, Granted Authorities=[ROLE_default-roles-springbootkeycloak, ROLE_offline_access, ROLE_USER, ROLE_uma_authorization]]
+[36mapp         |[0m 2021-06-26 22:27:59.101 DEBUG 1 --- [nio-8080-exec-4] o.k.adapters.PreAuthActionsHandler       : adminRequest http://localhost:8090/terms/bliep
+[36mapp         |[0m 2021-06-26 22:27:59.101 DEBUG 1 --- [nio-8080-exec-4] o.k.a.AuthenticatedActionsHandler        : AuthenticatedActionsValve.invoke http://localhost:8090/terms/bliep
+[36mapp         |[0m 2021-06-26 22:27:59.101 DEBUG 1 --- [nio-8080-exec-4] o.k.a.AuthenticatedActionsHandler        : Policy enforcement is disabled.
+[36mapp         |[0m 2021-06-26 22:27:59.101 DEBUG 1 --- [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : POST "/terms/bliep", parameters={}
+[36mapp         |[0m 2021-06-26 22:27:59.103 DEBUG 1 --- [nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to nl.bentels.test.sec.TermsResource#addTerm(String)
+[36mapp         |[0m 2021-06-26 22:27:59.126 DEBUG 1 --- [nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+[36mapp         |[0m 2021-06-26 22:27:59.126 DEBUG 1 --- [nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Nothing to write: null body
+[36mapp         |[0m 2021-06-26 22:27:59.126 DEBUG 1 --- [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+[36mapp         |[0m 2021-06-26 22:28:10.004 DEBUG 1 --- [nio-8080-exec-6] o.k.adapters.PreAuthActionsHandler       : adminRequest http://localhost:8090/terms/blap
+[36mapp         |[0m 2021-06-26 22:28:10.005 DEBUG 1 --- [nio-8080-exec-6] .k.a.t.AbstractAuthenticatedActionsValve : AuthenticatedActionsValve.invoke /terms/blap
+[36mapp         |[0m 2021-06-26 22:28:10.005 DEBUG 1 --- [nio-8080-exec-6] o.k.a.AuthenticatedActionsHandler        : AuthenticatedActionsValve.invoke http://localhost:8090/terms/blap
+[36mapp         |[0m 2021-06-26 22:28:10.005 DEBUG 1 --- [nio-8080-exec-6] o.k.a.AuthenticatedActionsHandler        : Policy enforcement is disabled.
+[36mapp         |[0m 2021-06-26 22:28:10.007 DEBUG 1 --- [nio-8080-exec-6] f.KeycloakAuthenticationProcessingFilter : Attempting Keycloak authentication
+[36mapp         |[0m 2021-06-26 22:28:10.008 DEBUG 1 --- [nio-8080-exec-6] o.k.a.BearerTokenRequestAuthenticator    : Found [1] values in authorization header, selecting the first value for Bearer.
+[36mapp         |[0m 2021-06-26 22:28:10.008 DEBUG 1 --- [nio-8080-exec-6] o.k.a.BearerTokenRequestAuthenticator    : Verifying access_token
+[36mapp         |[0m 2021-06-26 22:28:10.020 DEBUG 1 --- [nio-8080-exec-6] o.k.a.BearerTokenRequestAuthenticator    : successful authorized
+[36mapp         |[0m 2021-06-26 22:28:10.020 DEBUG 1 --- [nio-8080-exec-6] a.s.a.SpringSecurityRequestAuthenticator : Completing bearer authentication. Bearer roles: [default-roles-springbootkeycloak, offline_access, uma_authorization, USER] 
+[36mapp         |[0m 2021-06-26 22:28:10.021 DEBUG 1 --- [nio-8080-exec-6] o.k.adapters.RequestAuthenticator        : User '426441b8-c8d8-44f1-a895-782d35b379c1' invoking 'http://localhost:8090/terms/blap' on client 'test-app'
+[36mapp         |[0m 2021-06-26 22:28:10.021 DEBUG 1 --- [nio-8080-exec-6] o.k.adapters.RequestAuthenticator        : Bearer AUTHENTICATED
+[36mapp         |[0m 2021-06-26 22:28:10.021 DEBUG 1 --- [nio-8080-exec-6] f.KeycloakAuthenticationProcessingFilter : Auth outcome: AUTHENTICATED
+[36mapp         |[0m 2021-06-26 22:28:10.022 DEBUG 1 --- [nio-8080-exec-6] f.KeycloakAuthenticationProcessingFilter : Authentication success using bearer token/basic authentication. Updating SecurityContextHolder to contain: KeycloakAuthenticationToken [Principal=426441b8-c8d8-44f1-a895-782d35b379c1, Credentials=[PROTECTED], Authenticated=true, Details=org.keycloak.adapters.springsecurity.account.SimpleKeycloakAccount@343d935, Granted Authorities=[ROLE_default-roles-springbootkeycloak, ROLE_offline_access, ROLE_USER, ROLE_uma_authorization]]
+[36mapp         |[0m 2021-06-26 22:28:10.022 DEBUG 1 --- [nio-8080-exec-6] o.k.adapters.PreAuthActionsHandler       : adminRequest http://localhost:8090/terms/blap
+[36mapp         |[0m 2021-06-26 22:28:10.022 DEBUG 1 --- [nio-8080-exec-6] o.k.a.AuthenticatedActionsHandler        : AuthenticatedActionsValve.invoke http://localhost:8090/terms/blap
+[36mapp         |[0m 2021-06-26 22:28:10.022 DEBUG 1 --- [nio-8080-exec-6] o.k.a.AuthenticatedActionsHandler        : Policy enforcement is disabled.
+[36mapp         |[0m 2021-06-26 22:28:10.022 DEBUG 1 --- [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : POST "/terms/blap", parameters={}
+[36mapp         |[0m 2021-06-26 22:28:10.023 DEBUG 1 --- [nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to nl.bentels.test.sec.TermsResource#addTerm(String)
+[36mapp         |[0m 2021-06-26 22:28:10.023 DEBUG 1 --- [nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+[36mapp         |[0m 2021-06-26 22:28:10.023 DEBUG 1 --- [nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Nothing to write: null body
+[36mapp         |[0m 2021-06-26 22:28:10.023 DEBUG 1 --- [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+[36mapp         |[0m 2021-06-26 22:28:16.924 DEBUG 1 --- [nio-8080-exec-8] o.k.adapters.PreAuthActionsHandler       : adminRequest http://localhost:8090/terms/bloep
+[36mapp         |[0m 2021-06-26 22:28:16.925 DEBUG 1 --- [nio-8080-exec-8] .k.a.t.AbstractAuthenticatedActionsValve : AuthenticatedActionsValve.invoke /terms/bloep
+[36mapp         |[0m 2021-06-26 22:28:16.925 DEBUG 1 --- [nio-8080-exec-8] o.k.a.AuthenticatedActionsHandler        : AuthenticatedActionsValve.invoke http://localhost:8090/terms/bloep
+[36mapp         |[0m 2021-06-26 22:28:16.925 DEBUG 1 --- [nio-8080-exec-8] o.k.a.AuthenticatedActionsHandler        : Policy enforcement is disabled.
+[36mapp         |[0m 2021-06-26 22:28:16.926 DEBUG 1 --- [nio-8080-exec-8] f.KeycloakAuthenticationProcessingFilter : Attempting Keycloak authentication
+[36mapp         |[0m 2021-06-26 22:28:16.929 DEBUG 1 --- [nio-8080-exec-8] o.k.a.BearerTokenRequestAuthenticator    : Found [1] values in authorization header, selecting the first value for Bearer.
+[36mapp         |[0m 2021-06-26 22:28:16.930 DEBUG 1 --- [nio-8080-exec-8] o.k.a.BearerTokenRequestAuthenticator    : Verifying access_token
+[36mapp         |[0m 2021-06-26 22:28:16.938 DEBUG 1 --- [nio-8080-exec-8] o.k.a.BearerTokenRequestAuthenticator    : successful authorized
+[36mapp         |[0m 2021-06-26 22:28:16.938 DEBUG 1 --- [nio-8080-exec-8] a.s.a.SpringSecurityRequestAuthenticator : Completing bearer authentication. Bearer roles: [default-roles-springbootkeycloak, offline_access, uma_authorization, USER] 
+[36mapp         |[0m 2021-06-26 22:28:16.938 DEBUG 1 --- [nio-8080-exec-8] o.k.adapters.RequestAuthenticator        : User '426441b8-c8d8-44f1-a895-782d35b379c1' invoking 'http://localhost:8090/terms/bloep' on client 'test-app'
+[36mapp         |[0m 2021-06-26 22:28:16.939 DEBUG 1 --- [nio-8080-exec-8] o.k.adapters.RequestAuthenticator        : Bearer AUTHENTICATED
+[36mapp         |[0m 2021-06-26 22:28:16.939 DEBUG 1 --- [nio-8080-exec-8] f.KeycloakAuthenticationProcessingFilter : Auth outcome: AUTHENTICATED
+[36mapp         |[0m 2021-06-26 22:28:16.939 DEBUG 1 --- [nio-8080-exec-8] f.KeycloakAuthenticationProcessingFilter : Authentication success using bearer token/basic authentication. Updating SecurityContextHolder to contain: KeycloakAuthenticationToken [Principal=426441b8-c8d8-44f1-a895-782d35b379c1, Credentials=[PROTECTED], Authenticated=true, Details=org.keycloak.adapters.springsecurity.account.SimpleKeycloakAccount@2c5223a2, Granted Authorities=[ROLE_default-roles-springbootkeycloak, ROLE_offline_access, ROLE_USER, ROLE_uma_authorization]]
+[36mapp         |[0m 2021-06-26 22:28:16.939 DEBUG 1 --- [nio-8080-exec-8] o.k.adapters.PreAuthActionsHandler       : adminRequest http://localhost:8090/terms/bloep
+[36mapp         |[0m 2021-06-26 22:28:16.939 DEBUG 1 --- [nio-8080-exec-8] o.k.a.AuthenticatedActionsHandler        : AuthenticatedActionsValve.invoke http://localhost:8090/terms/bloep
+[36mapp         |[0m 2021-06-26 22:28:16.939 DEBUG 1 --- [nio-8080-exec-8] o.k.a.AuthenticatedActionsHandler        : Policy enforcement is disabled.
+[36mapp         |[0m 2021-06-26 22:28:16.939 DEBUG 1 --- [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : POST "/terms/bloep", parameters={}
+[36mapp         |[0m 2021-06-26 22:28:16.940 DEBUG 1 --- [nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to nl.bentels.test.sec.TermsResource#addTerm(String)
+[36mapp         |[0m 2021-06-26 22:28:16.941 DEBUG 1 --- [nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+[36mapp         |[0m 2021-06-26 22:28:16.941 DEBUG 1 --- [nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Nothing to write: null body
+[36mapp         |[0m 2021-06-26 22:28:16.941 DEBUG 1 --- [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+[36mapp         |[0m 2021-06-26 22:28:25.351 DEBUG 1 --- [nio-8080-exec-2] o.k.adapters.PreAuthActionsHandler       : adminRequest http://localhost:8090/terms
+[36mapp         |[0m 2021-06-26 22:28:25.351 DEBUG 1 --- [nio-8080-exec-2] .k.a.t.AbstractAuthenticatedActionsValve : AuthenticatedActionsValve.invoke /terms
+[36mapp         |[0m 2021-06-26 22:28:25.351 DEBUG 1 --- [nio-8080-exec-2] o.k.a.AuthenticatedActionsHandler        : AuthenticatedActionsValve.invoke http://localhost:8090/terms
+[36mapp         |[0m 2021-06-26 22:28:25.351 DEBUG 1 --- [nio-8080-exec-2] o.k.a.AuthenticatedActionsHandler        : Policy enforcement is disabled.
+[36mapp         |[0m 2021-06-26 22:28:25.352 DEBUG 1 --- [nio-8080-exec-2] o.k.adapters.PreAuthActionsHandler       : adminRequest http://localhost:8090/terms
+[36mapp         |[0m 2021-06-26 22:28:25.352 DEBUG 1 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/terms", parameters={}
+[36mapp         |[0m 2021-06-26 22:28:25.353 DEBUG 1 --- [nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to nl.bentels.test.sec.TermsResource#getAllTerms()
+[36mapp         |[0m 2021-06-26 22:28:25.353 DEBUG 1 --- [nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json]
+[36mapp         |[0m 2021-06-26 22:28:25.354 DEBUG 1 --- [nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Writing [[bliep, blap, bloep]]
+[36mapp         |[0m 2021-06-26 22:28:25.356 DEBUG 1 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+[36mapp         |[0m 2021-06-26 22:29:35.909 DEBUG 1 --- [io-8080-exec-10] o.k.adapters.PreAuthActionsHandler       : adminRequest http://localhost:8090/terms
+[36mapp         |[0m 2021-06-26 22:29:35.909 DEBUG 1 --- [io-8080-exec-10] .k.a.t.AbstractAuthenticatedActionsValve : AuthenticatedActionsValve.invoke /terms
+[36mapp         |[0m 2021-06-26 22:29:35.909 DEBUG 1 --- [io-8080-exec-10] o.k.a.AuthenticatedActionsHandler        : AuthenticatedActionsValve.invoke http://localhost:8090/terms
+[36mapp         |[0m 2021-06-26 22:29:35.909 DEBUG 1 --- [io-8080-exec-10] o.k.a.AuthenticatedActionsHandler        : Policy enforcement is disabled.
+[36mapp         |[0m 2021-06-26 22:29:35.911 DEBUG 1 --- [io-8080-exec-10] f.KeycloakAuthenticationProcessingFilter : Attempting Keycloak authentication
+[36mapp         |[0m 2021-06-26 22:29:35.911 DEBUG 1 --- [io-8080-exec-10] o.k.a.BearerTokenRequestAuthenticator    : Found [1] values in authorization header, selecting the first value for Bearer.
+[36mapp         |[0m 2021-06-26 22:29:35.911 DEBUG 1 --- [io-8080-exec-10] o.k.a.BearerTokenRequestAuthenticator    : Verifying access_token
+[36mapp         |[0m 2021-06-26 22:29:35.919 DEBUG 1 --- [io-8080-exec-10] o.k.a.BearerTokenRequestAuthenticator    : successful authorized
+[36mapp         |[0m 2021-06-26 22:29:35.919 DEBUG 1 --- [io-8080-exec-10] a.s.a.SpringSecurityRequestAuthenticator : Completing bearer authentication. Bearer roles: [default-roles-springbootkeycloak, offline_access, ADMIN, uma_authorization, USER] 
+[36mapp         |[0m 2021-06-26 22:29:35.919 DEBUG 1 --- [io-8080-exec-10] o.k.adapters.RequestAuthenticator        : User 'f561041a-83df-42e2-8816-579d3e02a9c8' invoking 'http://localhost:8090/terms' on client 'test-app'
+[36mapp         |[0m 2021-06-26 22:29:35.919 DEBUG 1 --- [io-8080-exec-10] o.k.adapters.RequestAuthenticator        : Bearer AUTHENTICATED
+[36mapp         |[0m 2021-06-26 22:29:35.919 DEBUG 1 --- [io-8080-exec-10] f.KeycloakAuthenticationProcessingFilter : Auth outcome: AUTHENTICATED
+[36mapp         |[0m 2021-06-26 22:29:35.919 DEBUG 1 --- [io-8080-exec-10] f.KeycloakAuthenticationProcessingFilter : Authentication success using bearer token/basic authentication. Updating SecurityContextHolder to contain: KeycloakAuthenticationToken [Principal=f561041a-83df-42e2-8816-579d3e02a9c8, Credentials=[PROTECTED], Authenticated=true, Details=org.keycloak.adapters.springsecurity.account.SimpleKeycloakAccount@5bcf22a, Granted Authorities=[ROLE_default-roles-springbootkeycloak, ROLE_offline_access, ROLE_ADMIN, ROLE_USER, ROLE_uma_authorization]]
+[36mapp         |[0m 2021-06-26 22:29:35.919 DEBUG 1 --- [io-8080-exec-10] o.k.adapters.PreAuthActionsHandler       : adminRequest http://localhost:8090/terms
+[36mapp         |[0m 2021-06-26 22:29:35.920 DEBUG 1 --- [io-8080-exec-10] o.k.a.AuthenticatedActionsHandler        : AuthenticatedActionsValve.invoke http://localhost:8090/terms
+[36mapp         |[0m 2021-06-26 22:29:35.920 DEBUG 1 --- [io-8080-exec-10] o.k.a.AuthenticatedActionsHandler        : Policy enforcement is disabled.
+[36mapp         |[0m 2021-06-26 22:29:35.920 DEBUG 1 --- [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : DELETE "/terms", parameters={}
+[36mapp         |[0m 2021-06-26 22:29:35.920 DEBUG 1 --- [io-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to nl.bentels.test.sec.TermsResource#clearTerms()
+[36mapp         |[0m 2021-06-26 22:29:35.921 DEBUG 1 --- [io-8080-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+[36mapp         |[0m 2021-06-26 22:29:35.921 DEBUG 1 --- [io-8080-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Nothing to write: null body
+[36mapp         |[0m 2021-06-26 22:29:35.921 DEBUG 1 --- [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+[36mapp         |[0m 2021-06-26 22:29:39.900 DEBUG 1 --- [nio-8080-exec-1] o.k.adapters.PreAuthActionsHandler       : adminRequest http://localhost:8090/terms
+[36mapp         |[0m 2021-06-26 22:29:39.900 DEBUG 1 --- [nio-8080-exec-1] .k.a.t.AbstractAuthenticatedActionsValve : AuthenticatedActionsValve.invoke /terms
+[36mapp         |[0m 2021-06-26 22:29:39.900 DEBUG 1 --- [nio-8080-exec-1] o.k.a.AuthenticatedActionsHandler        : AuthenticatedActionsValve.invoke http://localhost:8090/terms
+[36mapp         |[0m 2021-06-26 22:29:39.901 DEBUG 1 --- [nio-8080-exec-1] o.k.a.AuthenticatedActionsHandler        : Policy enforcement is disabled.
+[36mapp         |[0m 2021-06-26 22:29:39.902 DEBUG 1 --- [nio-8080-exec-1] o.k.adapters.PreAuthActionsHandler       : adminRequest http://localhost:8090/terms
+[36mapp         |[0m 2021-06-26 22:29:39.902 DEBUG 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/terms", parameters={}
+[36mapp         |[0m 2021-06-26 22:29:39.902 DEBUG 1 --- [nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to nl.bentels.test.sec.TermsResource#getAllTerms()
+[36mapp         |[0m 2021-06-26 22:29:39.902 DEBUG 1 --- [nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json]
+[36mapp         |[0m 2021-06-26 22:29:39.903 DEBUG 1 --- [nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [[]]
+[36mapp         |[0m 2021-06-26 22:29:39.904 DEBUG 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK

@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: security-test
+    
+logging:
+  level:
+    root: info
+    org:
+      apache:
+        coyote:
+          http11:
+            Http11InputBuffer: off 
+keycloak:
+  auth-server-url: http://keycloak:8080/auth
+  client-key-password: 09d4cc28-9230-4221-b467-f100422da2fa
+  realm: SpringBootKeycloak
+  resource: test-app
+  ssl-required: external
+#  public-client: true
+  bearer-only: true

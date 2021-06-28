@@ -2,6 +2,9 @@ spring:
   application:
     name: security-test
     
+server:
+  port: 8090
+    
 logging:
   level:
     root: info
@@ -16,5 +19,4 @@ keycloak:
   realm: SpringBootKeycloak
   resource: test-app
   ssl-required: external
-#  public-client: true
   bearer-only: true

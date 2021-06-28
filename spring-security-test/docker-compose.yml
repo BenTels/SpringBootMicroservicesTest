@@ -55,9 +55,9 @@ services:
     networks:
       - keycloak-network
     ports:
-      - 8090:8080
-    environment:
-      JAVA_TOOL_OPTIONS: -Ddebug -Dlogging.level.org.keycloak=DEBUG
+      - 8090:8090
+#    environment:
+#      JAVA_TOOL_OPTIONS: -Ddebug -Dlogging.level.org.keycloak=DEBUG
 
 
 networks:

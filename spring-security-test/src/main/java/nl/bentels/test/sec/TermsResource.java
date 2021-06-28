@@ -7,6 +7,7 @@ import java.util.List;
 import org.springframework.context.annotation.Role;
 import org.springframework.http.MediaType;
 import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,7 +25,7 @@ public class TermsResource {
 	}
 	
 	@PostMapping(path = "/terms/{term}")
-	@Secured({"ROLE_USER", "ROLE_ADMIN"})
+	@PreAuthorize("hasPermission(this, 'ADD_TERM')")
 	public void addTerm(@PathVariable("term") String newTerm) {
 		synchronized (TERMS) {
 			TERMS.add(newTerm);
@@ -32,7 +33,7 @@ public class TermsResource {
 	}
 	
 	@DeleteMapping(path = "/terms")
-	@Secured("ROLE_ADMIN")
+	@PreAuthorize("hasPermission(this, 'CLEAR_TERMS')")
 	public void clearTerms() {
 		synchronized (TERMS) {
 			TERMS.clear();
